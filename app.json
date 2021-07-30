@@ -4,6 +4,11 @@
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/TEAM-PATRICIA/PatriciaMusic2.0",
   "stack": "container",
+  "buildpacks": [
+   {
+     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+   }   
+  ],        
   "env": {
     "SESSION_NAME": {
       "description": "Pyrogram session string",
@@ -13,15 +18,53 @@
       "description": "A bot token from @BotFather",
       "required": true
     },
+    "BOT_USERNAME": {
+      "description": "Your bot's username without @",
+      "required": true
+    },
     "BOT_NAME": {
       "description": "Your MusicPlayer Bot Name.",
       "required": false,
       "value": ""
     },
+    "SUPPORT_GROUP": {
+      "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
+      "required": false,
+      "value": "Patricia_support"
+    },
+    "PROJECT_NAME": {
+      "description": "Your MusicPlayer project Name.",
+      "required": false,
+      "value": "PatriciaMusic"
+    },
+    "ASSISTANT_NAME": {
+      "description": "Your MusicPlayer's assistant Username without @.",
+      "required": true
+    },
+    "ARQ_API_KEY": {
+      "description": "Get from @ARQRobot.",
+      "required": false,
+      "value": "VKSSQH-SRNJYZ-MSOJAI-QALESR-ARQ"
+    },    
+    "BG_IMAGE": {
+      "description": "BG image of bot (Use transparent one) [IGNORE].",
+      "required": false,
+      "value": "https://telegra.ph/file/cdaa3de5adab7ac73689f.png"
+    },     
+    "UPDATES_CHANNEL": {
+      "description": "Updates Channel without @ [Leave this if you don't have one].",
+      "required": false,
+      "value": "patricia_updates"
+    },    
     "API_ID": {
       "description": "App ID from my.telegram.org/apps",
       "required": true
     },
+    "PMPERMIT": {
+      "description": "Change to turn off",
+      "required": false,
+      "value": "ENABLE"
+    },    
     "API_HASH": {
       "description": "App hash from my.telegram.org/apps",
       "required": true
