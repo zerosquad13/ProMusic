@@ -12,10 +12,9 @@
 
 ## Me On Telegram As [💥 Pᴀᴛʀɪᴄɪᴀ 💥](https://t.me/PATRICIA_ROBOT)
 
-## 💡 CREDITS 💞
-
+##Cᴏᴍᴍᴀɴᴅs
 ```
-->Mᴜsɪᴄ•Pʟᴀʏᴇʀ<-
+->Music•Player<-
 =>> *Song Playing* 🎧 
 ❍ /play  - play song you requested
 ❍ /dplay  - play song you requested via deezer
