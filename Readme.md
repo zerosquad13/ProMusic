@@ -7,7 +7,7 @@
 #  💡 INNEXIA CHAT BOT 👮
 💡 This is Innexia An Advanced Telegram CHAT Bot For Best AI Experience !! 🤖 
 
-![logo](https://telegra.ph/file/de658f39cd9e7d1a4c9af.jpg)
+![logo](https://telegra.ph/file/4d1c1151214987122659b.jpg)
 #  💡Support Group 👥[Here !](https://t.me/SiderzBotChat)
 
 
