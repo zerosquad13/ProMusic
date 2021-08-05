@@ -4,11 +4,11 @@
 </p>
 
 
-#  💡 Pᴀᴛʀɪᴄɪᴀ•Mᴜsɪᴄ 👮
+# 💡 Pᴀᴛʀɪᴄɪᴀ•Mᴜsɪᴄ👮
 💡 This is Innexia An Advanced Telegram CHAT Bot For Best AI Experience !! 🤖 
 
 ![logo](https://telegra.ph/file/4d1c1151214987122659b.jpg)
-#  💡Dᴇᴠᴇʟᴏᴩᴇᴍᴇɴᴛ•Sᴜᴩᴩᴏʀᴛ Gʀᴏᴜᴩ👥[Here !](https://t.me/patricia_support)
+#  💡Dᴇᴠᴇʟᴏᴩᴇᴍᴇɴᴛ•Sᴜᴩᴩᴏʀᴛ👥[Here !](https://t.me/patricia_support)
 
 
 ## 💡 How To Host ❓️
