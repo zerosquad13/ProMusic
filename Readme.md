@@ -4,25 +4,22 @@
 </p>
 
 
-#  💡 INNEXIA CHAT BOT 👮
+#  💡 Pᴀᴛʀɪᴄɪᴀ•Mᴜsɪᴄ 👮
 💡 This is Innexia An Advanced Telegram CHAT Bot For Best AI Experience !! 🤖 
 
 ![logo](https://telegra.ph/file/4d1c1151214987122659b.jpg)
-#  💡Support Group 👥[Here !](https://t.me/SiderzBotChat)
+#  💡Dᴇᴠᴇʟᴏᴩᴇᴍᴇɴᴛ•Sᴜᴩᴩᴏʀᴛ Gʀᴏᴜᴩ👥[Here !](https://t.me/patricia_support)
 
 
 ## 💡 How To Host ❓️
 The easiest way to deploy this Bot
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/TEAM-PATRICIA/innexiaChatbot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-brown?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/TEAM-PATRICIA/PatriciaMusic2.0"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="180" height="50"/></a></p>
  
-## Me On Telegram [💥 INNEXIA 💥](https://t.me/innexiaBot)
+## Me On Telegram As [💥 Pᴀᴛʀɪᴄɪᴀ 💥](https://t.me/PATRICIA_ROBOT)
 
 ## 💡 CREDITS 💞
 
 ```
-❤️ Mr Sammy = @opSammy
-💜 Maverick = @M4A1_08
-💙 MashaBot = @MashaBot
-💗 Innexia  = @TeamInnexia
+Aʀʀɪᴠɪɴɢ Sᴏᴏɴ
 ```
 
