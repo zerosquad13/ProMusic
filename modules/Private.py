@@ -39,7 +39,7 @@ HELP = """
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton("❔ How To Use Me ❔", callback_data="help"),
+        InlineKeyboardButton("❔ How To Use Me ❔", http://t.me/elricX_assistantBot?start=help),
                 ],[
                 InlineKeyboardButton('📢 Updates', url='https://t.me/TGBOTZXD'),
                 InlineKeyboardButton('💬 Support', url='https://t.me/TGBOTSXD')
