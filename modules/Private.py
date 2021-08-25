@@ -2,12 +2,8 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client, filters
 import signal
-from utils import USERNAME, FFMPEG_PROCESSES
-from config import Config
 import os
 import sys
-U=USERNAME
-CHAT=Config.CHAT
 
 
 HOME_TEXT = "<b>Helo, [{}](tg://user?id={})\n\n• Iam A Bot Project by @TGBOTZXD\n• I Can Manage Group VC's\n\n• Hit /help to know about available commands.</b>"
