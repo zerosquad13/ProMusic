@@ -1,10 +1,12 @@
+import signal
+import os
+import sys
 from time import time
 from datetime import datetime
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
 from pyrogram import Client, filters
-import signal
-import os
-import sys
+from helpers.filters import command
+from config import BOT_USERNAME, UPDATES_CHANNEL, SUPPORT_GROUP
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -91,3 +93,24 @@ async def show_help(client, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(photo="https://telegra.ph/file/33cc1aeaf934f19943bdc.jpg", caption=HELP, reply_markup=reply_markup)
     await message.delete()
+
+@Client.on_message(command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+async def start(client: Client, message: Message):
+    current_time = datetime.utcnow()
+    uptime_sec = (current_time - START_TIME).total_seconds()
+    uptime = await _human_time_duration(int(uptime_sec))
+    await message.reply_text(
+        f"""✅ **bot is running**\n<b>💠 **uptime:**</b> `{uptime}`""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "✨ Group", url=f"https://t.me/{SUPPORT_GROUP}"
+                    ),
+                    InlineKeyboardButton(
+                        "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    )
+                ]
+            ]
+        )
+    )
