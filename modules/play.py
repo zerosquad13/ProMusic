@@ -18,6 +18,7 @@ from youtube_search import YoutubeSearch
 
 from config import ARQ_API_KEY
 from config import BOT_NAME as bn
+from config import PLAY_IMG as MENU_IMG 
 from config import DURATION_LIMIT
 from config import UPDATES_CHANNEL as updateschannel
 from config import que
@@ -620,9 +621,15 @@ async def play(_, message: Message):
                         InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="Close 🛑", callback_data="cls")],
+                    [InlineKeyboardButton(text="🗑 Close Menu", callback_data="cls")],
                 ]
-            )       
+            )  
+             await message.reply_photo(
+                photo=f"{MENU_IMG}",
+                caption=toxxt,
+                reply_markup=keyboard
+            )
+     
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
             # WHY PEOPLE ALWAYS LOVE PORN ?? (A point to think)
             return
@@ -1182,10 +1189,15 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                  InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                  InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
                 ],
-                 [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [
+                    InlineKeyboardButton("Playlist 📖", "playlist"),
+                ],
+                [InlineKeyboardButton(""🗑 Close Menu", "cls")],
             ]
     )
     requested_by = useer_name
