@@ -1,6 +1,12 @@
+import signal
+import os
+import sys
 from time import time
 from datetime import datetime
-
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
+from pyrogram import Client, filters
+from helpers.filters import command
+from config import BOT_USERNAME, UPDATES_CHANNEL, SUPPORT_GROUP
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
