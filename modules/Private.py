@@ -54,7 +54,7 @@ HELP = """
 • `/end` __Stops music play__
 • `/admincache` __Refresh list of admins with vc power__
 © Powered By 
-[ __@tgbotsXD || @tgbotzXD__ ]
+[ __@DeCodeSupport|| @DeeCodeBots__ ]
 """
 
 
@@ -63,13 +63,13 @@ HELP = """
 async def start(client, message):
     buttons = [
        [
-                InlineKeyboardButton('📢 Updates', url='https://t.me/TGBOTZXD'),
-                InlineKeyboardButton('💬 Support', url='https://t.me/TGBOTSXD')
+                InlineKeyboardButton('📢 Updates', url='https://t.me/DeeCodeBots'),
+                InlineKeyboardButton('💬 Support', url='https://t.me/DeCodeSupport')
                 ],[
-                InlineKeyboardButton('🤖 Developer', url='https://t.me/piroXpower'),
+                InlineKeyboardButton('🤖 Developer', url='https://t.me/DeeCodeDevs'),
                 InlineKeyboardButton('🎧 Chats', url='https://t.me/frndsXworld')
                 ],[
-                InlineKeyboardButton('📜 Source Code 📜', url='https://github.com/TEAM-PATRICIA/PatriciaMusic2.0'),
+                InlineKeyboardButton('📜 Source Code 📜', url='https://github.com/TeamDeeCode/DeCoDeMusic'),
     ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -81,13 +81,13 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-                InlineKeyboardButton('📢 Updates', url='https://t.me/TGBOTZXD'),
-                InlineKeyboardButton('💬 Support', url='https://t.me/TGBOTSXD')
+                InlineKeyboardButton('📢 Updates', url='https://t.me/DeeCodeBots'),
+                InlineKeyboardButton('💬 Support', url='https://t.me/DeCodeSupport')
                 ],[
-                InlineKeyboardButton('🤖 Developer', url='https://t.me/piroXpower'),
+                InlineKeyboardButton('🤖 Developer', url='https://t.me/DeeCodeDevs'),
                 InlineKeyboardButton('🎧 Chats', url='https://t.me/frndsXworld')
                 ],[
-                InlineKeyboardButton('📜 Source Code 📜', url='https://github.com/TEAM-PATRICIA/PatriciaMusic2.0'),
+                InlineKeyboardButton('📜 Source Code 📜', url='https://github.com/TeamDeeCode/DeCoDeMusic'),
        ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
