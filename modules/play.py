@@ -40,6 +40,14 @@ chat_id = None
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
 DISABLED_GROUPS = []
 useer ="NaN"
+
+KRONA = ImageFont.truetype("etc/KronaOne-Regular.ttf", 48)
+KRONA_52 = ImageFont.truetype("etc/KronaOne-Regular.ttf", 52)
+ITC_REG = ImageFont.truetype(
+    "etc/ITC Avant Garde Gothic LT Book Regular.otf", 48)
+KRONA_SMALL = ImageFont.truetype("etc/KronaOne-Regular.ttf", 32)
+
+
 def cb_admin_check(func: Callable) -> Callable:
     async def decorator(client, cb):
         admemes = a.get(cb.message.chat.id)
@@ -54,10 +62,13 @@ def cb_admin_check(func: Callable) -> Callable:
 
 def transcode(filename):
     ffmpeg.input(filename).output(
-        "input.raw", format="s16le", acodec="pcm_s16le", ac=2, ar="48k"
-    ).overwrite_output().run()
+        "input.raw",
+        format="s16le",
+        acodec="pcm_s16le",
+        ac=2,
+        ar="48k"
+    ).overwrite_output().run() 
     os.remove(filename)
-
 
 # Convert seconds to mm:ss
 def convert_seconds(seconds):
@@ -84,16 +95,15 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-async def generate_cover(requested_by, title, views, duration, thumbnail):
+async def generate_cover(title, thumbnail):
     async with aiohttp.ClientSession() as session:
         async with session.get(thumbnail) as resp:
             if resp.status == 200:
                 f = await aiofiles.open("background.png", mode="wb")
                 await f.write(await resp.read())
                 await f.close()
-
     image1 = Image.open("./background.png")
-    image2 = Image.open("./etc/foreground.png")
+    image2 = Image.open("etc/foreground.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
@@ -101,16 +111,11 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((205, 550), f"Title: {title}", (51, 215, 255), font=font)
-    draw.text((205, 590), f"Duration: {duration}", (255, 255, 255), font=font)
-    draw.text((205, 630), f"Views: {views}", (255, 255, 255), font=font)
-    draw.text(
-        (205, 670),
-        f"Added By: {requested_by}",
-        (255, 255, 255),
-        font=font,
-    )
+    font = ImageFont.truetype("etc/font.otf", 60)
+    draw.text((10, 580), f"Now Playing", fill="white", font=ITC_REG)
+    draw.text((10, 640), f"{title}", fill="white", font=KRONA_52)
+    draw.text((985, 20), f"A Team Decode", fill="white", font=KRONA_SMALL)
+    draw.text((1100, 50), f"Product", fill="white", font=KRONA_SMALL)
     img.save("final.png")
     os.remove("temp.png")
     os.remove("background.png")
