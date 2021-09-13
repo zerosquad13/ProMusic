@@ -1,7 +1,7 @@
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 
-from config import SESSION_NAME, API_ID, API_HASH
+from DeCodeMusic.config import SESSION_NAME, API_ID, API_HASH
 from . import queues
 
 client = Client(SESSION_NAME, API_ID, API_HASH)
