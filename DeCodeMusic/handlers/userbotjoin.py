@@ -1,10 +1,10 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
-from helpers.filters import command
-from helpers.decorators import authorized_users_only, errors
-from callsmusic.callsmusic import client as USER
-from config import BOT_USERNAME, SUDO_USERS
+from DeCodeMusic.helpers.filters import command
+from DeCodeMusic.helpers.decorators import authorized_users_only, errors
+from DeCodeMusic.callsmusic.callsmusic import client as USER
+from DeCodeMusic.config import BOT_USERNAME, SUDO_USERS
 
 
 @Client.on_message(command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot)
