@@ -5,7 +5,7 @@ from pyrogram.types import (
     Message,
     InlineKeyboardButton
 )
-from config import (
+from DeCodeMusic.config import (
     COMMAND_PREFIXES
 )
 
