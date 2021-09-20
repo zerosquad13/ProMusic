@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from pyrogram import Client as app
 from DeCodeMusic.helpers.filters import command
-from DeCodeMusic.config import BOT_USERNAME
+from config import BOT_USERNAME
 
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
