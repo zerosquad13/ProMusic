@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 from DeCodeMusic.helpers.filters import command
 from DeCodeMusic.helpers.decorators import authorized_users_only, errors
-from DeCodeMusic.callsmusic.callsmusic import client as USER
+from callsmusic.callsmusic import client as USER
 from DeCodeMusic.config import BOT_USERNAME, SUDO_USERS
 
 
@@ -27,7 +27,7 @@ async def addchannel(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤖: i'm joined here for playing music on voice chat")
+        await USER.send_message(message.chat.id, "🤖: ᴢᴀɪᴅ ᴠᴄ ᴄʜᴀᴛ ʜᴇʟᴘᴇʀ ᴊᴏɪɴᴇᴅ ɪɴ ᴜʀ ᴄʜᴀᴛ ᴛᴏ ᴘʟᴀʏ ꜱᴏɴɢ ɪɴ ᴠᴄ")
     except UserAlreadyParticipant:
         await message.reply_text(
             "<b>helper already in your chat</b>",
@@ -35,7 +35,7 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
+            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group for more info contact @Zaid_Support."
             "\n\nOr manually add Asisstant to your Group and try again</b>",
         )
         return
@@ -110,7 +110,7 @@ async def addcchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
+            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel for more info join @Zaid_Support."
             f"\n\nOr manually add @{ASSISTANT_NAME} to your Group and try again</b>",
         )
         return
