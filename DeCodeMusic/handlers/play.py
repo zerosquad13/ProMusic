@@ -11,15 +11,15 @@ from asyncio.queues import QueueEmpty
 from pyrogram import Client, filters
 from typing import Callable
 from DeCodeMusic.helpers.channelmusic import get_chat_id
-from callsmusic import callsmusic
-from callsmusic.queues import queues
+from DeCodeMusic.callsmusic import callsmusic
+from DeCodeMusic.callsmusic.queues import queues
 from DeCodeMusic.helpers.admins import get_administrators
 from youtube_search import YoutubeSearch
 from callsmusic.callsmusic import client as USER
 from pyrogram.errors import UserAlreadyParticipant
 from DeCodeMusic.downloaders import youtube
 
-from config import que, THUMB_IMG, DURATION_LIMIT, BOT_USERNAME, BOT_NAME, UPDATES_CHANNEL, GROUP_SUPPORT, ASSISTANT_NAME
+from DeCodeMusic.config import que, THUMB_IMG, DURATION_LIMIT, BOT_USERNAME, BOT_NAME, UPDATES_CHANNEL, GROUP_SUPPORT, ASSISTANT_NAME
 from DeCodeMusic.helpers.filters import command, other_filters
 from DeCodeMusic.helpers.decorators import authorized_users_only
 from DeCodeMusic.helpers.gets import get_file_name, get_url
