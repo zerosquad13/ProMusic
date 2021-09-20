@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
 from DeCodeMusic.helpers.decorators import authorized_users_only
-from config import BOT_NAME, BOT_USERNAME, OWNER_USERNAME, GROUP_SUPPORT, UPDATES_CHANNEL, ASSISTANT_NAME, OWNER_USERNAME
+from DeCodeMusic.config import BOT_NAME, BOT_USERNAME, OWNER_USERNAME, GROUP_SUPPORT, UPDATES_CHANNEL, ASSISTANT_NAME, OWNER_USERNAME
 from DeCodeMusic.handlers.play import cb_admin_check
 
 
