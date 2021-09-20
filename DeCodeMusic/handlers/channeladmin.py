@@ -4,9 +4,9 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from cache.admins import set
-from helpers.channelmusic import get_chat_id
-from helpers.decorators import authorized_users_only, errors
-from helpers.filters import command, other_filters
+from DeCodeMusic.helpers.channelmusic import get_chat_id
+from DeCodeMusic.helpers.decorators import authorized_users_only, errors
+from DeCodeMusic.helpers.filters import command, other_filters
 from callsmusic import callsmusic
 
 
