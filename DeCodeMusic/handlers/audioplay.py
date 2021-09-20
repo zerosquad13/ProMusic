@@ -7,12 +7,12 @@ from os import path
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 
-from callsmusic import callsmusic, queues
+from DeCodeMusic.callsmusic import callsmusic, queues
 
 import DeCodeMusic.converter
 from DeCodeMusic.downloaders import youtube
 
-from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
+from DeCodeMusic.config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
 from DeCodeMusic.helpers.filters import command, other_filters
 from DeCodeMusic.helpers.decorators import errors
 from DeCodeMusic.helpers.errors import DurationLimitError
