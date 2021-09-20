@@ -13,12 +13,12 @@ from datetime import datetime
 from functools import wraps
 from os import environ, execle, path, remove
 
-from callsmusic.callsmusic import client as pakaya
+from DeCodeMusic.callsmusic.callsmusic import client as pakaya
 from DeCodeMusic.helpers.database import db
 from DeCodeMusic.helpers.dbtools import main_broadcast_handler
 from DeCodeMusic.helpers.decorators import sudo_users_only
 from DeCodeMusic.handlers.song import humanbytes, get_text
-from config import BOT_USERNAME, OWNER_ID, SUDO_USERS, GROUP_SUPPORT
+from DeCodeMusic.config import BOT_USERNAME, OWNER_ID, SUDO_USERS, GROUP_SUPPORT
 
 
 # Stats Of Your Bot
