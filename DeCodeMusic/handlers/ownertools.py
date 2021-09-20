@@ -14,10 +14,10 @@ from functools import wraps
 from os import environ, execle, path, remove
 
 from callsmusic.callsmusic import client as pakaya
-from helpers.database import db
-from helpers.dbtools import main_broadcast_handler
-from helpers.decorators import sudo_users_only
-from handlers.song import humanbytes, get_text
+from DeCodeMusic.helpers.database import db
+from DeCodeMusic.helpers.dbtools import main_broadcast_handler
+from DeCodeMusic.helpers.decorators import sudo_users_only
+from DeCodeMusic.handlers.song import humanbytes, get_text
 from config import BOT_USERNAME, OWNER_ID, SUDO_USERS, GROUP_SUPPORT
 
 
@@ -34,7 +34,7 @@ async def botstats(_, message: Message):
     disk_usage = psutil.disk_usage('/').percent
     total_users = await db.total_users_count()
     await message.reply_text(
-        text=f"**📊 stats Of @{BOT_USERNAME}** \n\n**🤖 bot version:** `v6.5` \n\n**🙎🏼 users:** \n » **users on pm:** `{total_users}` \n\n**💾 disk usage,** \n » **disk space:** `{total}` \n » **used:** `{used}({disk_usage}%)` \n » **free:** `{free}` \n\n**🎛 hardware usage,** \n » **CPU usage:** `{cpu_usage}%` \n » **RAM usage:** `{ram_usage}%`",
+        text=f"**📊 stats Of @{BOT_USERNAME}** \n\n**🤖 bot version:** `v6.5` \n\n**🙎🏼 users:** \n » **users on pm:** `{total_users}` \n\n**❤️ disk usage,** \n » **disk space:** `{total}` \n » **used:** `{used}({disk_usage}%)` \n » **free:** `{free}` \n\n**🎛 hardware usage,** \n » **CPU usage:** `{cpu_usage}%` \n » **RAM usage:** `{ram_usage}%`",
         parse_mode="Markdown",
         quote=True
     )
