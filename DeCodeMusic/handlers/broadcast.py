@@ -1,8 +1,3 @@
-# Copyright (C) 2021 By VeezProject
-# Originally written by levina on github
-# Broadcast function
-
-
 import asyncio
 
 from pyrogram import Client, filters
