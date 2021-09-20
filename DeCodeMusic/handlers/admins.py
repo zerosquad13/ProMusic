@@ -25,7 +25,7 @@ async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
 # Back Button
-BACK_BUTTON = InlineKeyboardMarkup([[InlineKeyboardButton("🏠 go back", callback_data="cbback")]])
+BACK_BUTTON = InlineKeyboardMarkup([[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbback")]])
 
 @Client.on_message(filters.text & ~filters.private)
 async def delcmd(_, message: Message):
@@ -42,7 +42,7 @@ async def update_admin(client, message):
     for u in new_ads:
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
-    await message.reply_text("✅ Bot **reloaded correctly !**\n✅ **Admin list** has been **updated !**")
+    await message.reply_text("😄 ʙᴏᴛ **ʀᴇʟᴏᴀᴅᴇᴅ ᴘᴏᴡᴇʀ ʙʏ ᴢᴀɪᴅ !**\n✅ **Admin list** has been **updated !**")
 
 
 # Control Menu Of Player
@@ -51,38 +51,38 @@ async def update_admin(client, message):
 @authorized_users_only
 async def controlset(_, message: Message):
     await message.reply_text(
-        "**💡 opened music player control menu!**\n\n**💭 you can control the music player just by pressing one of the buttons below**",
+        "**😗 ᴏᴘᴇɴᴇᴅ ᴍᴜꜱɪᴄ ᴘʟᴀʏᴇʀ ᴍᴇɴᴜ!**\n\n**💭 ʏᴏᴜ ᴄᴀɴ ᴄᴏɴᴛʀᴏʟ ᴛʜᴇ ᴍᴜꜱɪᴄ ᴘʟᴀʏᴇʀ ᴊᴜꜱᴛ ʙʏ ᴘʀᴏᴄᴄᴇꜱꜱɪɴɢ ᴏɴᴇ ᴏꜰ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⏸ pause", callback_data="cbpause"
+                        "⏸ ᴘᴀᴜꜱᴇ", callback_data="cbpause"
                     ),
                     InlineKeyboardButton(
-                        "▶️ resume", callback_data="cbresume"
+                        "▶️ ʀᴇꜱᴜᴍᴇ", callback_data="cbresume"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⏩ skip", callback_data="cbskip"
+                        "⏩ ꜱᴋɪᴘ", callback_data="cbskip"
                     ),
                     InlineKeyboardButton(
-                        "⏹ end", callback_data="cbend"
+                        "⏹ ᴇɴᴅ", callback_data="cbend"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⛔ anti cmd", callback_data="cbdelcmds"
+                        "⛔ ᴀɴᴛɪ ᴄᴍᴅꜱ", callback_data="cbdelcmds"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🛄 group tools", callback_data="cbgtools"
+                        "ɢʀᴘꜱ ᴛᴏᴏʟꜱ", callback_data="cbgtools"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗑 Close", callback_data="close"
+                        "🗑 ᴄʟᴏꜱᴇ", callback_data="close"
                     )
                 ]
             ]
@@ -98,10 +98,10 @@ async def pause(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("❗ nothing in streaming!")
+        await message.reply_text("❗ᴍ ᴋᴜᴄʜʜ ᴘʟᴀʏ ᴋᴀʀ ʀʜᴀ ʜᴜ?😒!")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ music paused!")
+        await message.reply_text("▶️ ᴡᴛꜰ ᴘᴀᴜꜱᴇᴅ 😌!")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -112,10 +112,10 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❗ nothing is paused!")
+        await message.reply_text("❗ᴋᴜᴄʜʜ ᴘᴀᴜꜱᴇᴅ ᴍ ᴛʜᴀ?")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ music resumed!")
+        await message.reply_text("⏸ ᴏᴍᴋ ʀᴇꜱᴜᴍᴇᴅ!")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -124,7 +124,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ nothing in streaming!")
+        await message.reply_text("❗ ʜᴇʜᴇ ᴍ ᴋᴜᴄʜʜ ᴘʟᴀʏ ʜɪ ɴ ᴋᴀʀ ʀʜᴀ😉!")
     else:
         try:
             queues.clear(chat_id)
@@ -132,7 +132,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("⏹ streaming ended!")
+        await message.reply_text("⏹ ᴇɴᴅᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴢᴀɪᴅ!")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -142,7 +142,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ nothing in streaming!")
+        await message.reply_text("❗ ɴᴏᴛʜɪɴɢ ɪꜱ ᴘʟᴀʏɪɴɢ!")
     else:
         queues.task_done(chat_id)
 
@@ -158,7 +158,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"⫸ skipped : **{skip[0]}**\n⫸ now playing : **{qeue[0][0]}**")
+    await message.reply_text(f"⫸ ꜱᴋɪᴘᴘᴇᴅ : **{skip[0]}**\n⫸ ɴᴏᴡ ᴘʟᴀʏɪɴɢ : **{qeue[0][0]}**")
 
 
 @Client.on_message(command("auth") & other_filters)
@@ -166,15 +166,15 @@ async def skip(_, message: Message):
 async def authenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("❗ reply to message to authorize user!")
+        await message.reply("❗ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ ᴛᴏ ᴀᴜᴛʜ!")
         return
     if message.reply_to_message.from_user.id not in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
         new_admins.append(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
-        await message.reply("🟢 user authorized.\n\nfrom now on, that's user can use the admin commands.")
+        await message.reply("🟢 ᴏᴋᴀʏ ɴᴏᴡ ꜱᴏɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ.\n\nᴊᴀᴀ ᴍᴏᴊ ᴋᴀʀ, ʟɪᴋᴇ ᴀᴅᴍɪɴ ᴄᴍᴅꜱ 😁.")
     else:
-        await message.reply("✅ user already authorized!")
+        await message.reply("✅ ᴏᴋᴀʏ ꜱᴏɴ ɪꜱ ɴᴏᴡ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ!")
 
 
 @Client.on_message(command("deauth") & other_filters)
@@ -182,15 +182,15 @@ async def authenticate(client, message):
 async def deautenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("❗ reply to message to deauthorize user!")
+        await message.reply("❗ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴏꜰ ᴛʜᴇ ᴜꜱᴇʀ!")
         return
     if message.reply_to_message.from_user.id in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
         new_admins.remove(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
-        await message.reply("🔴 user deauthorized.\n\nfrom now that's user can't use the admin commands.")
+        await message.reply("🔴 ᴡᴛꜰ ᴅᴇᴀᴜᴛʜᴏʀɪᴢᴇᴅ ꜱᴜᴄᴄᴇꜱꜱ.\n\nʜᴇʜᴇ ɴᴏᴡ ᴛʜɪꜱ ɴɪʙʙᴀ ᴄᴀɴᴛ ᴜꜱᴇ ᴍɪɴᴇ ꜰᴇᴀᴛᴜʀᴇꜱ.")
     else:
-        await message.reply("✅ user already deauthorized!")
+        await message.reply("✅ ʜᴀʜᴀ ᴀᴀ ɢʏᴀ ᴊᴀᴍᴇᴇɴ ᴘᴇ!")
 
 
 # this is a anti cmd feature
@@ -198,26 +198,26 @@ async def deautenticate(client, message):
 @authorized_users_only
 async def delcmdc(_, message: Message):
     if len(message.command) != 2:
-        await message.reply_text("read the /help message to know how to use this command")
+        await message.reply_text("ʀᴇᴀᴅ /help ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅꜱ")
         return
     status = message.text.split(None, 1)[1].strip()
     status = status.lower()
     chat_id = message.chat.id
     if status == "on":
         if await delcmd_is_on(message.chat.id):
-            await message.reply_text("✅ already activated")
+            await message.reply_text("✅ ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
             return
         else:
             await delcmd_on(chat_id)
             await message.reply_text(
-                "🟢 activated successfully"
+                "🟢 ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴢᴀɪᴅ"
             )
     elif status == "off":
         await delcmd_off(chat_id)
-        await message.reply_text("🔴 disabled successfully")
+        await message.reply_text("🔴 ᴅɪꜱᴀʙʟᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ")
     else:
         await message.reply_text(
-            "read the /help message to know how to use this command"
+            "ʀᴇᴀᴅ /help ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅꜱ"
         )
 
 
