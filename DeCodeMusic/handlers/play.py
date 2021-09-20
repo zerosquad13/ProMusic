@@ -10,22 +10,22 @@ from os import path
 from asyncio.queues import QueueEmpty
 from pyrogram import Client, filters
 from typing import Callable
-from helpers.channelmusic import get_chat_id
+from DeCodeMusic.helpers.channelmusic import get_chat_id
 from callsmusic import callsmusic
 from callsmusic.queues import queues
-from helpers.admins import get_administrators
+from DeCodeMusic.helpers.admins import get_administrators
 from youtube_search import YoutubeSearch
 from callsmusic.callsmusic import client as USER
 from pyrogram.errors import UserAlreadyParticipant
-from downloaders import youtube
+from DeCodeMusic.downloaders import youtube
 
 from config import que, THUMB_IMG, DURATION_LIMIT, BOT_USERNAME, BOT_NAME, UPDATES_CHANNEL, GROUP_SUPPORT, ASSISTANT_NAME
-from helpers.filters import command, other_filters
-from helpers.decorators import authorized_users_only
-from helpers.gets import get_file_name, get_url
+from DeCodeMusic.helpers.filters import command, other_filters
+from DeCodeMusic.helpers.decorators import authorized_users_only
+from DeCodeMusic.helpers.gets import get_file_name, get_url
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, Voice
-from converter.converter import convert
-from cache.admins import admins as a
+from DeCodeMusic.converter.converter import convert
+from DeCodeMusic.cache.admins import admins as a
 from PIL import Image, ImageFont, ImageDraw
 
 
