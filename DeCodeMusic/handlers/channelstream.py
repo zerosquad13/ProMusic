@@ -22,10 +22,10 @@ from DeCodeMusic.handlers.play import transcode
 from DeCodeMusic.handlers.play import convert_seconds
 from DeCodeMusic.handlers.play import time_to_seconds
 from DeCodeMusic.handlers.play import changeImageSize
-from config import BOT_NAME as bn
-from config import DURATION_LIMIT
-from config import UPDATES_CHANNEL as updateschannel
-from config import que
+from DeCodeMusic.config import BOT_NAME as bn
+from DeCodeMusic.config import DURATION_LIMIT
+from DeCodeMusic.config import UPDATES_CHANNEL as updateschannel
+from DeCodeMusic.config import que
 from DeCodeMusic.cache.admins import admins as a
 from DeCodeMusic.helpers.errors import DurationLimitError
 from DeCodeMusic.helpers.decorators import errors
@@ -34,11 +34,11 @@ from DeCodeMusic.helpers.channelmusic import get_chat_id
 from DeCodeMusic.helpers.decorators import authorized_users_only
 from DeCodeMusic.helpers.filters import command, other_filters
 from DeCodeMusic.helpers.gets import get_file_name
-from callsmusic import callsmusic
-from callsmusic.callsmusic import client as USER
+from DeCodeMusic.callsmusic import callsmusic
+from DeCodeMusic.callsmusic.callsmusic import client as USER
 from DeCodeMusic.converter.converter import convert
 from DeCodeMusic.downloaders import youtube
-from callsmusic.queues import queues
+from DeCodeMusic.callsmusic.queues import queues
 
 chat_id = None
 
