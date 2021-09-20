@@ -11,72 +11,92 @@
   ],        
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram session string",
-      "required": true
+            "description": "fill with the pyrogram session string",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "your bot token from @BotFather",
+            "required": true
+        },
+        "BOT_NAME": {
+            "description": "your music bot name.",
+            "required": true,
+            "value": ""
+        },
+        "OWNER_ID": {
+            "description": "fill with your telegram id as the owner of the bot",
+            "required": true,
+            "value": ""
+        },
+        "DATABASE_URL": {
+            "description": "fill with the mongodb url get from cloud.mongodb.com",
+            "required": true,
+            "value": ""
+        },
+        "LOG_CHANNEL": {
+            "description": "create a private channel and get the channel id, add your bot as admin to the channel too",
+            "required": true,
+            "value": ""
+        },
+        "BROADCAST_AS_COPY": {
+            "description": "choose one between False and True, if you don't know what this is, ask to @VeezSupportGroup on telegram",
+            "required": false,
+            "value": "False"
+        },
+        "BOT_USERNAME": {
+            "description": "fill with your bot username without @",
+            "required": true,
+            "value": "zaid2_robot"
+        },
+        "ASSISTANT_NAME": {
+            "description": "fill with the assistant username without @",
+            "required": true,
+            "value": "zaid assistant"
+        },
+        "OWNER_NAME": {
+            "description": "fill with your username without @",
+            "required": false,
+            "value": "Timesisnotwaiting"
+        },
+        "API_ID": {
+            "description": "your App ID from my.telegram.org/apps",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "your Api hash from my.telegram.org/apps",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "fill with the user id who can access all function in your bot (separate with space).",
+            "required": true
+        },
+        "DURATION_LIMIT": {
+            "description": "max duration for video to download (in minutes).",
+            "required": true,
+            "value": "300"
+        },
+        "PMPERMIT": {
+            "description": "pm-permit for assistant.",
+            "required": false,
+            "value": "ENABLE"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "if you have channel fill the channel username here without @",
+            "required": false,
+            "value": ""
+        },
+        "GROUP_SUPPORT": {
+            "description": "if you have group fill the group username here without @",
+            "required": false,
+            "value": ""
+        }
     },
-    "BOT_TOKEN": {
-      "description": "A bot token from @BotFather",
-      "required": true
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     },
-    "BOT_USERNAME": {
-      "description": "Your bot's username without @",
-      "required": true
-    },
-    "BOT_NAME": {
-      "description": "Your MusicPlayer Bot Name.",
-      "required": false,
-      "value": ""
-    },
-    "SUPPORT_GROUP": {
-      "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
-      "required": false,
-      "value": "Patricia_support"
-    },
-    "PROJECT_NAME": {
-      "description": "Your MusicPlayer project Name.",
-      "required": false,
-      "value": "PatriciaMusic"
-    },
-    "ASSISTANT_NAME": {
-      "description": "Your MusicPlayer's assistant Username without @.",
-      "required": true
-    },
-    "ARQ_API_KEY": {
-      "description": "Get from @ARQRobot.",
-      "required": false,
-      "value": "VKSSQH-SRNJYZ-MSOJAI-QALESR-ARQ"
-    },    
-    "BG_IMAGE": {
-      "description": "BG image of bot (Use transparent one) [IGNORE].",
-      "required": false,
-      "value": "https://telegra.ph/file/cdaa3de5adab7ac73689f.png"
-    },     
-    "UPDATES_CHANNEL": {
-      "description": "Updates Channel without @ [Leave this if you don't have one].",
-      "required": false,
-      "value": "patricia_updates"
-    },    
-    "API_ID": {
-      "description": "App ID from my.telegram.org/apps",
-      "required": true
-    },
-    "PMPERMIT": {
-      "description": "Change to turn off",
-      "required": false,
-      "value": "ENABLE"
-    },    
-    "API_HASH": {
-      "description": "App hash from my.telegram.org/apps",
-      "required": true
-    },
-    "SUDO_USERS": {
-      "description": "List of user IDs counted as admin everywhere (separated by space).",
-      "required": true
-    },
-    "DURATION_LIMIT": {
-      "description": "Max audio duration limit for downloads (minutes).",
-      "required": true,
-      "value": "10"
+    {
+      "url": "heroku/python"
     }
-  }
+  ]
 }
