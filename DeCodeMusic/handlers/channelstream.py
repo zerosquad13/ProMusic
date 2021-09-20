@@ -16,28 +16,28 @@ from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.types import Voice
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtube_search import YoutubeSearch
-from handlers.play import generate_cover
-from handlers.play import cb_admin_check
-from handlers.play import transcode
-from handlers.play import convert_seconds
-from handlers.play import time_to_seconds
-from handlers.play import changeImageSize
+from DeCodeMusic.handlers.play import generate_cover
+from DeCodeMusic.handlers.play import cb_admin_check
+from DeCodeMusic.handlers.play import transcode
+from DeCodeMusic.handlers.play import convert_seconds
+from DeCodeMusic.handlers.play import time_to_seconds
+from DeCodeMusic.handlers.play import changeImageSize
 from config import BOT_NAME as bn
 from config import DURATION_LIMIT
 from config import UPDATES_CHANNEL as updateschannel
 from config import que
-from cache.admins import admins as a
-from helpers.errors import DurationLimitError
-from helpers.decorators import errors
-from helpers.admins import get_administrators
-from helpers.channelmusic import get_chat_id
-from helpers.decorators import authorized_users_only
-from helpers.filters import command, other_filters
-from helpers.gets import get_file_name
+from DeCodeMusic.cache.admins import admins as a
+from DeCodeMusic.helpers.errors import DurationLimitError
+from DeCodeMusic.helpers.decorators import errors
+from DeCodeMusic.helpers.admins import get_administrators
+from DeCodeMusic.helpers.channelmusic import get_chat_id
+from DeCodeMusic.helpers.decorators import authorized_users_only
+from DeCodeMusic.helpers.filters import command, other_filters
+from DeCodeMusic.helpers.gets import get_file_name
 from callsmusic import callsmusic
 from callsmusic.callsmusic import client as USER
-from converter.converter import convert
-from downloaders import youtube
+from DeCodeMusic.converter.converter import convert
+from DeCodeMusic.downloaders import youtube
 from callsmusic.queues import queues
 
 chat_id = None
