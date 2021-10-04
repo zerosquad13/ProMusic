@@ -1,45 +1,35 @@
-import traceback
 import os
-import sys
-import requests
-import aiohttp
-import youtube_dl
-import os
-import json
-import wget
-import aiohttp
+from os import path
+from typing import Callable
+
 import aiofiles
+import aiohttp
 import ffmpeg
-from os import path
-from typing import Dict
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw
-from DeCodeMusic.config import que
-from pyrogram import Client
-from pyrogram.types import Message, Voice
-from typing import Callable, Coroutine, Dict, List, Tuple, Union
-from DeCodeMusic.callsmusic import callsmusic
-from DeCodeMusic.callsmusic.queues import queues
-from DeCodeMusic.converter.converter import convert
-from DeCodeMusic.helpers.admins import get_administrators
-from os import path
-from youtube_search import YoutubeSearch
-from pyrogram import filters, emoji
-from pyrogram.types import InputMediaPhoto
-from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired
-from pyrogram.errors.exceptions.flood_420 import FloodWait
-from DeCodeMusic.callsmusic.callsmusic import client as USER
+import requests
+import wget
+from PIL import Image, ImageDraw, ImageFont
+from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
-from DeCodeMusic.downloaders import youtube
-from DeCodeMusic.config import BOT_USERNAME as bn, DURATION_LIMIT,  ARQ_API_KEY
-from DeCodeMusic.helpers.filters import command, other_filters
-from DeCodeMusic.helpers.decorators import errors, authorized_users_only
-from DeCodeMusic.helpers.errors import DurationLimitError
-from DeCodeMusic.helpers.gets import get_url, get_file_name
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from DeCodeMusic.cache.admins import admins as a
-from pyrogram.errors import UserNotParticipant
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from Python_ARQ import ARQ
+from youtube_search import YoutubeSearch
+
+from DeCoDeMusic.config import ARQ_API_KEY
+from DeCoDeMusic.config import BOT_NAME as bn
+from DeCoDeMusic.config import DURATION_LIMIT
+from DeCoDeMusic.config import UPDATES_CHANNEL as updateschannel
+from DeCoDeMusic.config import que
+from DeCoDeMusic.cache.admins import admins as a
+from DeCoDeMusic.helpers.admins import get_administrators
+from DeCoDeMusic.helpers.channelmusic import get_chat_id
+from DeCoDeMusic.helpers.decorators import authorized_users_only
+from DeCoDeMusic.helpers.filters import command, other_filters
+from DeCoDeMusic.helpers.gets import get_file_name
+from DeCoDeMusic.callsmusic import callsmusic
+from DeCoDeMusic.callsmusic import client as USER
+from DeCoDeMusic.converter.converter import convert
+from DeCoDeMusic.downloaders import youtube
+from DeCoDeMusic.callsmusic.queues import queues
 
 from Python_ARQ import ARQ
 
