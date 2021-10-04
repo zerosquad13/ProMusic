@@ -217,48 +217,6 @@ async def delcmdc(_, message: Message):
 
 # music player callbacks (control by buttons feature)
 
-@Client.on_message(command(["control", f"control@{BOT_USERNAME}", "p"]))
-@errors
-@authorized_users_only
-async def controlset(_, message: Message):
-    await message.reply_text(
-        "**😗 ᴏᴘᴇɴᴇᴅ ᴍᴜꜱɪᴄ ᴘʟᴀʏᴇʀ ᴍᴇɴᴜ!**\n\n**💭 ʏᴏᴜ ᴄᴀɴ ᴄᴏɴᴛʀᴏʟ ᴛʜᴇ ᴍᴜꜱɪᴄ ᴘʟᴀʏᴇʀ ᴊᴜꜱᴛ ʙʏ ᴘʀᴏᴄᴄᴇꜱꜱɪɴɢ ᴏɴᴇ ᴏꜰ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ**",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "⏸ ᴘᴀᴜꜱᴇ", callback_data="cbpause"
-                    ),
-                    InlineKeyboardButton(
-                        "▶️ ʀᴇꜱᴜᴍᴇ", callback_data="cbresume"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "⏩ ꜱᴋɪᴘ", callback_data="cbskip"
-                    ),
-                    InlineKeyboardButton(
-                        "⏹ ᴇɴᴅ", callback_data="cbend"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "⛔ ᴀɴᴛɪ ᴄᴍᴅꜱ", callback_data="cbdelcmds"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "ɢʀᴘꜱ ᴛᴏᴏʟꜱ", callback_data="cbgtools"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🗑 ᴄʟᴏꜱᴇ", callback_data="close"
-                    )
-                ]
-            ]
-        )
-    )
 
 @Client.on_callback_query(filters.regex("cbpause"))
 @cb_admin_check
@@ -327,7 +285,7 @@ async def cbskip(_, query: CallbackQuery):
         return
     await query.edit_message_text(f"⏭ skipped music\n\n» skipped : **{skip[0]}**\n» now playing : **{qeue[0][0]}**", reply_markup=BACK_BUTTON)
 
-# (C) Veez Music Project
+# (C) DeCode
 
 # ban & unban function
 
