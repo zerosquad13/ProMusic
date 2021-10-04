@@ -21,6 +21,7 @@ from pyrogram.types import Message, Voice
 from typing import Callable, Coroutine, Dict, List, Tuple, Union
 from DeCodeMusic.callsmusic import callsmusic
 from DeCodeMusic.callsmusic.queues import queues
+from DeCodeMusic.converter.converter import convert
 from DeCodeMusic.helpers.admins import get_administrators
 from os import path
 from youtube_search import YoutubeSearch
