@@ -4,7 +4,6 @@ import sys
 import requests
 import aiohttp
 import youtube_dl
-import converter
 import os
 import json
 import wget
@@ -490,8 +489,7 @@ async def play(_, message: Message):
         )
     requested_by = message.from_user.first_name
     await generate_cover(requested_by, title, views, duration, thumbnail)  
-    file_path = await converter.convert(youtube.download(url))
-  
+    
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         qeue = que.get(message.chat.id)
