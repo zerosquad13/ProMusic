@@ -3,7 +3,7 @@ from typing import Dict
 from pytgcalls import GroupCallFactory
 
 from DeCodeMusic.callsmusic import client
-from DeCodeMusic.callmusic.queues import queues
+from DeCodeMusic.callsmusic.queues import queues
 
 instances: Dict[int, GroupCallFactory] = {}
 active_chats: Dict[int, Dict[str, bool]] = {}
