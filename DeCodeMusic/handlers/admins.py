@@ -42,7 +42,7 @@ async def update_admin(client, message):
     for u in new_ads:
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
-    await message.reply_text("😄 ʙᴏᴛ **ʀᴇʟᴏᴀᴅᴇᴅ ᴘᴏᴡᴇʀ ʙʏ ᴢᴀɪᴅ !**\n✅ **Admin list** has been **updated !**")
+    await message.reply_text("😄 ʙᴏᴛ **ʀᴇʟᴏᴀᴅᴇᴅ ᴘᴏᴡᴇʀ ʙʏ Dᴇᴄᴏᴅᴇ !**\n✅ **Admin list** has been **updated !**")
 
 
 # Control Menu Of Player
@@ -210,7 +210,7 @@ async def delcmdc(_, message: Message):
         else:
             await delcmd_on(chat_id)
             await message.reply_text(
-                "🟢 ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴢᴀɪᴅ"
+                "🟢 ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ Decode"
             )
     elif status == "off":
         await delcmd_off(chat_id)
