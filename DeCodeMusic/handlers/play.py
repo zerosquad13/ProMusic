@@ -14,7 +14,7 @@ from DeCodeMusic.callsmusic import callsmusic
 from DeCodeMusic.callsmusic.queues import queues
 from DeCodeMusic.helpers.admins import get_administrators
 from youtube_search import YoutubeSearch
-from callsmusic.callsmusic import client as USER
+from DeCodeMusic.callsmusic.callsmusic import client as USER
 from pyrogram.errors import UserAlreadyParticipant
 from DeCodeMusic.downloaders import youtube
 
