@@ -1176,6 +1176,10 @@ async def m_cb(b, cb):
         await cb.message.edit(stats, reply_markup=marr)
         
     elif type_ == "skip":
+             callsmusic.stop(chet_id)
+             await cb.message.edit("- Leave Command Found..\n- Now Leaving VC!")
+
+    elif type_ == "skip":
         if qeue:
             qeue.pop(0)
         if chet_id not in callsmusic.active_chats:
