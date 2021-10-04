@@ -14,22 +14,22 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
-from DeCoDeMusic.config import ARQ_API_KEY
-from DeCoDeMusic.config import BOT_NAME as bn
-from DeCoDeMusic.config import DURATION_LIMIT
-from DeCoDeMusic.config import UPDATES_CHANNEL as updateschannel
-from DeCoDeMusic.config import que
-from DeCoDeMusic.cache.admins import admins as a
-from DeCoDeMusic.helpers.admins import get_administrators
-from DeCoDeMusic.helpers.channelmusic import get_chat_id
-from DeCoDeMusic.helpers.decorators import authorized_users_only
-from DeCoDeMusic.helpers.filters import command, other_filters
-from DeCoDeMusic.helpers.gets import get_file_name
-from DeCoDeMusic.callsmusic import callsmusic
-from DeCoDeMusic.callsmusic import client as USER
-from DeCoDeMusic.converter.converter import convert
-from DeCoDeMusic.downloaders import youtube
-from DeCoDeMusic.callsmusic.queues import queues
+from DeCodeMusic.config import ARQ_API_KEY
+from DeCodeMusic.config import BOT_NAME as bn
+from DeCodeMusic.config import DURATION_LIMIT
+from DeCodeMusic.config import UPDATES_CHANNEL as updateschannel
+from DeCodeMusic.config import que
+from DeCodeMusic.cache.admins import admins as a
+from DeCodeMusic.helpers.admins import get_administrators
+from DeCodeMusic.helpers.channelmusic import get_chat_id
+from DeCodeMusic.helpers.decorators import authorized_users_only
+from DeCodeMusic.helpers.filters import command, other_filters
+from DeCodeMusic.helpers.gets import get_file_name
+from DeCodeMusic.callsmusic import callsmusic
+from DeCodeMusic.callsmusic import client as USER
+from DeCodeMusic.converter.converter import convert
+from DeCodeMusic.downloaders import youtube
+from DeCodeMusic.callsmusic.queues import queues
 
 from Python_ARQ import ARQ
 
