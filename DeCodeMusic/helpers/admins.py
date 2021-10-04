@@ -1,4 +1,4 @@
-import cache.admins
+import DeCodeMusic.cache.admins
 from typing import List
 
 from pyrogram.types import Chat

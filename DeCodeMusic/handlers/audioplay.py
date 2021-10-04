@@ -1,7 +1,7 @@
 # this module i created only for playing music using audio file, idk, because the audio player on play.py module not working
 # so this is the alternative
 # audio play function
-
+import wget
 from os import path
 
 from pyrogram import Client
@@ -10,8 +10,9 @@ from pyrogram.types import Message, Voice
 from DeCodeMusic.callsmusic import callsmusic, queues
 
 import DeCodeMusic.converter
-from DeCodeMusic.downloaders import youtube
 
+from DeCodeMusic.downloaders import youtube
+from DeCodeMusic.converter.converter import convert
 from DeCodeMusic.config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
 from DeCodeMusic.helpers.filters import command, other_filters
 from DeCodeMusic.helpers.decorators import errors
@@ -55,7 +56,8 @@ async def stream(_, message: Message):
             if not path.isfile(path.join("downloads", file_name)) else file_name
         )
     elif url:
-        file_path = await converter.convert(youtube.download(url))
+        file = await convert(wget.download(url))
+    
     else:
         return await lel.edit_text("❗ you did not give me audio file or yt link to stream!")
 
