@@ -6,7 +6,6 @@ import aiohttp
 import youtube_dl
 import os
 import json
-import converter
 import wget
 import aiohttp
 import aiofiles
