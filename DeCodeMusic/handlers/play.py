@@ -346,16 +346,14 @@ async def play(_, message: Message):
                         InlineKeyboardButton(
                             "𝟮", callback_data=f"plll 1|{query}|{user_id}"
                         ),
-                    ], 
-                    [
                         InlineKeyboardButton(
                             "𝟯", callback_data=f"plll 2|{query}|{user_id}"
                         ),
-                        InlineKeyboardButton(
-                            "𝟰", callback_data=f"plll 3|{query}|{user_id}"
-                        ),
                     ], 
                     [
+                        InlineKeyboardButton(
+                            "𝟰", callback_data=f"plll 3|{query}|{user_id}"
+                        ),                    
                         InlineKeyboardButton(
                             "𝟱", callback_data=f"plll 4|{query}|{user_id}"
                         ),                       
@@ -805,7 +803,7 @@ async def lol_cb(b, cb):
     except:
         useer_name = cb.message.from_user.first_name
 
-    results = YoutubeSearch(query, max_results=5).to_dict()
+    results = YoutubeSearch(query, max_results=7).to_dict()
     resultss = results[x]["url_suffix"]
     title = results[x]["title"][:40]
     thumbnail = results[x]["thumbnails"][0]
