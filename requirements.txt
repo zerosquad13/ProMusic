@@ -11,6 +11,7 @@ asyncio
 youtube_search
 search_engine_parser
 ffmpeg-python
+Python_ARQ
 pillow
 future
 psutil
