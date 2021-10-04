@@ -489,13 +489,14 @@ async def play(_, message: Message):
         )
     requested_by = message.from_user.first_name
     await generate_cover(requested_by, title, views, duration, thumbnail)  
+    file = await convert(wget.download(slink))
     
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         qeue = que.get(message.chat.id)
         s_name = title
         r_by = message.from_user
-        loc = file_path
+        loc = file
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
         await message.reply_photo(
@@ -512,7 +513,7 @@ async def play(_, message: Message):
         qeue = que.get(message.chat.id)
         s_name = title            
         r_by = message.from_user
-        loc = file_path
+        loc = file
         appendable = [s_name, r_by, loc]      
         qeue.append(appendable)
         try:
