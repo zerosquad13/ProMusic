@@ -22,6 +22,7 @@ BOT_USERNAME = getenv("BOT_USERNAME", "DeCodeMusicBot")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "DeCodeMusic_Assistant")
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "DeCodeSupport")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "DecodeBota")
+OWNER_NAME = getenv("OWNER_NAME", "piroXpower") # isi dengan name kamu tanpa simbol @
 OWNER_USERNAME = getenv("OWNER_USERNAME", "piroXpower") # isi dengan username kamu tanpa simbol @
 PMPERMIT = getenv("PMPERMIT", None)
 OWNER_ID = int(os.environ.get("OWNER_ID")) # fill with your id as the owner of the bot
