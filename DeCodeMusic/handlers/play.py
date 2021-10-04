@@ -284,7 +284,6 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                [
-                   InlineKeyboardButton("⏹", "leave"),
                    InlineKeyboardButton("⏸", "puse"),
                    InlineKeyboardButton("▶️", "resume"),
                    InlineKeyboardButton("⏭", "skip"),
@@ -411,7 +410,6 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                       InlineKeyboardButton("⏹", "leave"),
                        InlineKeyboardButton("⏸", "puse"),
                        InlineKeyboardButton("▶️", "resume"),
                        InlineKeyboardButton("⏭", "skip"),
@@ -573,7 +571,6 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [    
             [
-                InlineKeyboardButton("⏹", "leave"),
                 InlineKeyboardButton("⏸", "puse"),
                 InlineKeyboardButton("▶️", "resume"),
                 InlineKeyboardButton("⏭", "skip"),
@@ -835,7 +832,6 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "leave"),
                 InlineKeyboardButton("⏸", "puse"),
                 InlineKeyboardButton("▶️", "resume"),
                 InlineKeyboardButton("⏭", "skip"),
@@ -950,7 +946,6 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "leave"),
                 InlineKeyboardButton("⏸", "puse"),
                 InlineKeyboardButton("▶️", "resume"),
                 InlineKeyboardButton("⏭", "skip"),
@@ -1162,7 +1157,6 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏹", "leave"),
                     InlineKeyboardButton("⏸", "puse"),
                     InlineKeyboardButton("▶️", "resume"),
                     InlineKeyboardButton("⏭", "skip"),
@@ -1174,11 +1168,7 @@ async def m_cb(b, cb):
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
-        
-    elif type_ == "leave":
-             callsmusic.stop(chet_id)
-             await cb.message.edit("- Leave Command Found..\n- Now Leaving VC!")
-
+            
     elif type_ == "skip":
         if qeue:
             qeue.pop(0)
