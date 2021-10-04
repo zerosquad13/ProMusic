@@ -385,10 +385,9 @@ async def m_cb(b, cb):
         else:
             await cb.answer('Chat is not connected!', show_alert=True)
 
-@Client.on_message(filters.command("ytplay") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("play") & filters.group & ~filters.edited)
 async def ytplay(_, message: Message):
-    global que
-    if message.chat.id in DISABLED_GROUPS:
+    global que    
         return
     lel = await message.reply("🔄 <b>Processing</b>")
     administrators = await get_administrators(message.chat)
