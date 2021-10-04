@@ -26,6 +26,7 @@ OWNER_NAME = getenv("OWNER_NAME", "piroXpower") # isi dengan name kamu tanpa sim
 OWNER_USERNAME = getenv("OWNER_USERNAME", "piroXpower") # isi dengan username kamu tanpa simbol @
 PMPERMIT = getenv("PMPERMIT", None)
 OWNER_ID = int(os.environ.get("OWNER_ID")) # fill with your id as the owner of the bot
+ARQ_API_KEY = getenv("ARQ_API_KEY", None)
 DATABASE_URL = os.environ.get("DATABASE_URL") # fill with your mongodb url
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL")) # make a private channel and get the channel id
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False)) # just fill with True or False (optional)
