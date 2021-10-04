@@ -490,7 +490,7 @@ async def play(_, message: Message):
         )
     requested_by = message.from_user.first_name
     await generate_cover(requested_by, title, views, duration, thumbnail)  
-    file = await convert(wget.download(slink))
+    file = await convert(wget.download(url))
     
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
