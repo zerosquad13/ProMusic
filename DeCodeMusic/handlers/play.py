@@ -1175,7 +1175,7 @@ async def m_cb(b, cb):
         )
         await cb.message.edit(stats, reply_markup=marr)
         
-    elif type_ == "skip":
+    elif type_ == "leave":
              callsmusic.stop(chet_id)
              await cb.message.edit("- Leave Command Found..\n- Now Leaving VC!")
 
