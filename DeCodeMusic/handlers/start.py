@@ -43,28 +43,28 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ᴄʜᴀᴛꜱ 😄", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ Aᴅᴅ Mᴇ Tᴏ Uʀ Cʜᴀᴛꜱ 😄", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "😢 ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ", callback_data="cbhowtouse")
+                        "😢 Hᴏᴡ Tᴏ Uꜱᴇ Mᴇ", callback_data="cbhowtouse")
                 ],[
                     InlineKeyboardButton(
-                         "😄 ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="cbcmds"
+                         "😄 Cᴏᴍᴍᴀɴᴅꜱ", callback_data="cbcmds"
                     ),
                     InlineKeyboardButton(
-                        "💝 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/DeeCodeDevs")
+                        "💝 Dᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/DeeCodeDevs")
                 ],[
                     InlineKeyboardButton(
-                        "👥 ᴏꜰꜰɪᴄɪᴀʟ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DeCodeSupport"
+                        "👥 Oꜰꜰɪᴄɪᴀʟ Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DeCodeSupport"
                     ),
                     InlineKeyboardButton(
-                        "🔥 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/DeeCodeBots")
+                        "🔥 Oꜰꜰɪᴄɪᴀʟ Cʜᴀɴɴᴇʟ", url=f"https://t.me/DeeCodeBots")
                 ],[
                     InlineKeyboardButton(
-                        "😁 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀᴛ", url="https://t.me/hindi_shayri_story")
+                        "😁 Oꜰꜰɪᴄɪᴀʟ Cʜᴀᴛ", url="https://t.me/hindi_shayri_story")
                 ],[
                     InlineKeyboardButton(
-                        "😉 ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ😍", url="https://github.com/TeamDeeCode/DeCoDeMusic"
+                        "😉 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TeamDeeCode/DeCoDeMusic"
                     )
                 ]
             ]
@@ -79,15 +79,15 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""✅ **ʙᴏᴛ ɪꜱ ʀᴜɴɴɪɴɢ**\n<b>💠 **ᴜᴘᴛɪᴍᴇ:**</b> `{uptime}`""",
+        f"""✅ **Bᴏᴛ Iꜱ Rᴜɴɴɪɴɢ**\n<b>💠 **Uᴘᴛɪᴍᴇ:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✨ ɢʀᴏᴜᴘ", url=f"https://t.me/DeCodeSupport"
+                        "✨ Gʀᴏᴜᴘ", url=f"https://t.me/DeCodeSupport"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/DeeCodeBots"
+                        "📣 Cʜᴀɴɴᴇʟ", url=f"https://t.me/DeeCodeBots"
                     )
                 ]
             ]
@@ -106,7 +106,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="❔ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ", callback_data=f"cbguide"
+                        text="❔ Hᴏᴡ Tᴏ Uꜱᴇ Mᴇ", callback_data=f"cbguide"
                     )
                 ]
             ]
@@ -125,28 +125,28 @@ async def help_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "⚡ ʙᴀꜱɪᴄ ᴄᴍᴅꜱ", callback_data="cbbasic"
+                        "⚡ Bᴀꜱɪᴄ Cᴍᴅꜱ", callback_data="cbbasic"
                     ),
                     InlineKeyboardButton(
-                        "❣️ ᴀᴅᴠᴀɴᴄᴇᴅ ᴄᴍᴅꜱ", callback_data="cbadvanced"
+                        "❣️ Aᴅᴠᴀɴᴄᴇᴅ Cᴍᴅꜱ", callback_data="cbadvanced"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "😏 ᴀᴅᴍɪɴ ᴄᴍᴅꜱ", callback_data="cbadmin"
+                        "😏 Aᴅᴍɪɴ Cᴍᴅꜱ", callback_data="cbadmin"
                     ),
                     InlineKeyboardButton(
-                        "⏲️ ꜱᴜᴅᴏ ᴄᴍᴅꜱ", callback_data="cbsudo"
+                        "⏲️ Sᴜᴅᴏ Cᴍᴅꜱ", callback_data="cbsudo"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🙂 ᴏᴡɴᴇʀ ᴄᴍᴅꜱ", callback_data="cbowner"
+                        "🙂 Oᴡɴᴇʀ Cᴍᴅꜱ", callback_data="cbowner"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "😍 ꜰᴜɴ ᴄᴍᴅꜱ", callback_data="cbfun"
+                        "😍 Fᴜɴ Cᴍᴅꜱ", callback_data="cbfun"
                     )
                 ]
             ]
@@ -157,10 +157,10 @@ async def help_(client: Client, message: Message):
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("ᴢ ᴘɪɴɴɢ...")
+    m_reply = await message.reply_text("ᴢ Pɪɴɴɢ...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "𝚣 `ᴘᴏɴɢ!!`\n"
+        "𝚣 `Pᴏɴɢ!!`\n"
         f"PONG  `{delta_ping * 1000:.3f} ᴍꜱ`"
     )
 
@@ -172,7 +172,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 ꜱᴛᴀᴛᴜꜱ:\n"
-        f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
-        f"• **ꜱᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`"
+        "🤖 Sᴛᴀᴛᴜꜱ:\n"
+        f"• **Uᴘᴛɪᴍᴇ:** `{uptime}`\n"
+        f"• **Sᴛᴀʀᴛ Tɪᴍᴇ:** `{START_TIME_ISO}`"
     )
