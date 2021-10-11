@@ -11,7 +11,7 @@ import aiofiles
 import aiohttp
 import requests
 import wget
-import ytdlp
+import yt_dlp
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
