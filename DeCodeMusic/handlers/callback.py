@@ -478,7 +478,7 @@ async def cbinfo(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbdevs"))
 async def cbdevs(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**CREDIT VC MUSIC PLAYER** \n\n`Here Some Developers Helping in Making The` **PRINCE MUSIC BOT**.""",
+        f"""**CREDIT VC MUSIC PLAYER** \n\n`Here Some Developers Helping in Making The` **PRINCE**.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -491,7 +491,7 @@ async def cbdevs(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "Pʀɪɴᴄᴇ (Oᴡɴᴇʀ)", url=f"https://t.me/DEVILDAD_PRINCE"
+                        "Pʀɪɴᴄᴇ", url=f"https://t.me/DEVILDAD_PRINCE"
                     )
                 ],
                 [
