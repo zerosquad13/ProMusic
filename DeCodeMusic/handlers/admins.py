@@ -47,6 +47,18 @@ async def update_admin(client, message):
 
 # Control Menu Of Player
 
+@Client.on_message(filters.command("adminreset"))
+async def update_admin(client, message: Message):
+    chat_id = get_chat_id(message.chat)
+    set(
+        chat_id,
+        [
+            member.user
+            for member in await message.chat.get_members(filter="administrators")
+        ],
+    )
+    await message.reply_text("❇️ Admin cache refreshed!")
+
 
 @Client.on_message(command("pause") & other_filters)
 @errors
@@ -154,6 +166,19 @@ async def unmute(_, message: Message):
     ) else (
         await message.reply_text("❌ Not in call")
     )
+
+@Client.on_message(filters.command("admincache"))
+@errors
+async def admincache(client, message: Message):
+    set(
+        message.chat.id,
+        [
+            member.user
+            for member in await message.chat.get_members(filter="administrators")
+        ],
+    )
+
+
 
 @Client.on_message(command("auth") & other_filters)
 @authorized_users_only
