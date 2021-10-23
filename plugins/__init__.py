@@ -1,5 +1,4 @@
 import heroku3
-
 from functools import wraps
 from config import HEROKU_API_KEY, HEROKU_APP_NAME
 
