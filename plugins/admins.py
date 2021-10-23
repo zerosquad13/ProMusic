@@ -16,7 +16,10 @@ from client import callsmusic
 @authorized_users_only
 async def pause(_, message: Message):
     callsmusic.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_text("⏸ Music Paused.")
+    await message.reply_photo(
+                             photo="https://telegra.ph/file/dd6814e241bfc4c0255cd.jpg", 
+                             caption="**⏸ Music Paused.\n use /resume**"
+    )
 
 
 @Client.on_message(command(["resume", "lanjut"]) & other_filters)
@@ -24,7 +27,10 @@ async def pause(_, message: Message):
 @authorized_users_only
 async def resume(_, message: Message):
     callsmusic.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_text("▶️ Music Resumed.")
+    await message.reply_photo(
+                             photo="https://telegra.ph/file/d0f2dd5b7519bb5444139.jpg", 
+                             caption="**▶️ Music Resumed.\n use /pause**"
+    )
 
 
 @Client.on_message(command(["end", "stop"]) & other_filters)
@@ -37,10 +43,13 @@ async def stop(_, message: Message):
         pass
 
     callsmusic.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_text("❌ **Stop the Song!**")
+    await message.reply_photo(
+                             photo="https://telegra.ph/file/8d22aa7d53b6acb9a125e.jpg", 
+                             caption="❌ **Stopped Streaming\n use /play for new song**"
+    )
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command(["skip", "next"]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
@@ -63,10 +72,13 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**")
+    await message.reply_photo(
+                             photo="https://telegra.ph/file/96129f4d0e984d2432e55.jpg", 
+                             caption="f- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**"
+    )
 
 
-@Client.on_message(filters.command("reload"))
+@Client.on_message(filters.command(["reload", "refresh"]))
 @errors
 @authorized_users_only
 async def admincache(client, message: Message):
@@ -78,4 +90,7 @@ async def admincache(client, message: Message):
         ),
     )
 
-    await message.reply_text("✅️ **Admin List** is **updated**")
+    await message.reply_photo(
+                              photo="https://telegra.ph/file/d881ea9de7620ecc36d08.jpg",
+                              caption="**Reloaded\n Admin List updated**"
+    )
