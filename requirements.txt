@@ -18,4 +18,4 @@ psutil
 wget
 motor
 dnspython
-bs4
+heroku3
