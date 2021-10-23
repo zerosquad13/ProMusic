@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/sahyam2019/oub-remix.svg?branch=sql-extended)](https://travis-ci.com/sahyam2019/oub-remix) 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/38fee611df7c4312be63a15cad64a50a)](https://www.codacy.com/manual/TeamDeeCode/DeCoDeMusic?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TeamDeeCode/DeCoDeMusic&amp;utm_campaign=Badge_Grade)
- ![Last Commit](https://img.shields.io/github/last-commit/TeamDeeCode/DeCoDeMusic)
- ![Contributers](https://img.shields.io/github/contributors/sahyam2019/oub-remix) ![Forks](https://img.shields.io/github/forks/TeamDeeCode/DeCoDeMusic)     
+![Last Commit](https://img.shields.io/github/last-commit/TeamDeeCode/DeCoDeMusic)
+![Contributers](https://img.shields.io/github/contributors/sahyam2019/oub-remix) ![Forks](https://img.shields.io/github/forks/TeamDeeCode/DeCoDeMusic)     
 
 # DeCoDe Music👮
 
