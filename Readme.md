@@ -5,11 +5,11 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/TeamDeeCode/DeCoDeMusic?color=blue&style=flat)
 ![GitHub issues](https://img.shields.io/github/issues/TeamDeeCode/DeCoDeMusic)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/TeamDeeCode/DeCoDeMusic)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/AsmSafone/RadioPlayerV2)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/AsmSafone/RadioPlayerV2)
-![GitHub repo size](https://img.shields.io/github/repo-size/AsmSafone/RadioPlayerV2?color=red)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/AsmSafone/RadioPlayerV2)
-![GitHub](https://img.shields.io/github/license/AsmSafone/RadioPlayerV2)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/TeamDeeCode/DeCoDeMusic)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/TeamDeeCode/DeCoDeMusic)
+![GitHub repo size](https://img.shields.io/github/repo-size/TeamDeeCode/DeCoDeMusic?color=red)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/TeamDeeCode/DeCoDeMusic)
+![GitHub](https://img.shields.io/github/license/TeamDeeCode/DeCoDeMusic)
 [![Bot Support](https://img.shields.io/badge/DeCode%20-Support%20-blue)](https://t.me/DeCodeSupport)
 
 # DeCoDe Music👮
