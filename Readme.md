@@ -5,8 +5,8 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/TeamDeeCode/DeCoDeMusic)![GitHub pull requests](https://img.shields.io/github/issues-pr/TeamDeeCode/DeCoDeMusic)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/TeamDeeCode/DeCoDeMusic)
 ![GitHub repo size](https://img.shields.io/github/repo-size/TeamDeeCode/DeCoDeMusic?color=red)![GitHub commit activity](https://img.shields.io/github/commit-activity/m/TeamDeeCode/DeCoDeMusic)
-![GitHub](https://img.shields.io/github/license/TeamDeeCode/DeCoDeMusic)
-# ᎠᎬᏨᎾᎠᎬ ᎷᏬᏕᎨᏨ👮
+![GitHub](https://img.shields.io/github/license/TeamDeeCode/DeCoDeMusic) 
+#𝗗𝗲𝗖𝗼𝗱𝗲 𝗠𝘂𝘀𝗶𝗰
 ![logo](https://telegra.ph/file/664e34bc77911c8fdf05c.jpg)
 #  💡Dᴇᴠᴇʟᴏᴩᴇᴍᴇɴᴛ•Sᴜᴩᴩᴏʀᴛ👥[Here !](https://t.me/DeCodeSupport)
 
