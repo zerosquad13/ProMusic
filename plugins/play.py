@@ -4,15 +4,15 @@ from typing import Callable
 from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
-from client import callsmusic, queues
-from client.callsmusic import client as USER
+from Client import callsmusic, queues
+from Client.callsmusic import client as USER
 from helpers.admins import get_administrators
 import requests
 import aiohttp
 import youtube_dl
 from youtube_search import YoutubeSearch
 import converter
-from downloaders import youtube
+from youtube import youtube
 from config import DURATION_LIMIT, que, SUDO_USERS
 from cache.admins import admins as a
 from helpers.filters import command
