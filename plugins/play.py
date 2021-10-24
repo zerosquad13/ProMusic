@@ -128,7 +128,7 @@ async def hfmm(_, message):
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"Maintainence Mode Disabled In **{message.chat.title}** Chat"
+            f"Maintainence Mode enabled In **{message.chat.title}** Chat"
         )
 
     elif status in ["OFF", "off", "Off"]:
@@ -139,7 +139,7 @@ async def hfmm(_, message):
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"Maintainence mode is now active in **{message.chat.title}** Chat"
+            f"Maintainence mode is now disabled in **{message.chat.title}** Chat"
         )
     else:
         await message.reply_text(
