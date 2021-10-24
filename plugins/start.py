@@ -58,20 +58,3 @@ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴩ Aɴᴅ Pʟᴀʏ Mᴜsɪᴄ Fʀᴇᴇʟ�
         ),
      disable_web_page_preview=True
     )
-
-@Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
-async def get_uptime(client: Client, m: Message):
-current_time = datetime.utcnow()
-uptime_sec = (current_time - START_TIME).total_seconds()
-uptime = await _human_time_duration(int(uptime_sec))
-     await m.reply_text(
-        f"🤖\n" f"• **Uptime:** `{uptime}`\n" f"• **Start Time:** `{START_TIME_ISO}`"
-     reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🔊Uᴩᴅᴀᴛᴇs", url="https://t.me/Deecodebots")
-                ]
-            ]
-        )
-)

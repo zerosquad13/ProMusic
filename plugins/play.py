@@ -105,7 +105,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 @Client.on_message(
-    command("musicplayer") & ~filters.edited & ~filters.bot & ~filters.private
+    command("Maintainmode") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @authorized_users_only
 async def hfmm(_, message):
@@ -116,34 +116,34 @@ async def hfmm(_, message):
         return
     if len(message.command) != 2:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "I only recognize `/Maintainmode on` and /Maintainmode `off only`"
         )
         return
     status = message.text.split(None, 1)[1]
     message.chat.id
-    if status in ["ON", "on", "On"]:
+    if status in ["OFF", "Off", "off"]:
         lel = await message.reply("`Processing...`")
         if message.chat.id not in DISABLED_GROUPS:
-            await lel.edit("Music Player Already Activated In This Chat")
+            await lel.edit("This Chat is not In maintainence mode")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"Music Player Successfully Enabled For Users In The Chat **{message.chat.title}**"
+            f"Maintainence Mode disabled In **{message.chat.title}** Chat"
         )
 
-    elif status in ["OFF", "off", "Off"]:
+    elif status in ["ON", "On", "on"]:
         lel = await message.reply("`Processing...`")
 
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("Music Player Already turned off In This Chat")
+            await lel.edit("maintainence mode  already active in This Chat")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"Music Player Successfully Deactivated For Users In The Chat **{message.chat.title}**"
+            f"Maintainence mode is now enabled in **{message.chat.title}** Chat"
         )
     else:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "I only recognize `/Maintainmode on` and /Maintainmode `off only"
         )
 
 
@@ -174,7 +174,7 @@ async def play(_, message: Message):
     global que
     global useer
     if message.chat.id in DISABLED_GROUPS:
-        await message.reply("**Musicplayer is Disable, ask admin for Enable it!**")
+        await message.reply("**maintainence mode is on, ask admin to disable it!**")
         return
     lel = await message.reply("🔄 **Processing...**")
 
@@ -316,7 +316,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "🧐 **Song not found! Try searching with the correct title\nExample » /play In The End\n\nChannel : @UserLazyXBot**"
+                "🧐 **Song not found! Try searching with the correct title\nExample » /play In The End\n\nChannel : @DeCodeMusicBot**"
             )
         await lel.edit("🔎 **Finding the song...**")
         query = message.text.split(None, 1)[1]
