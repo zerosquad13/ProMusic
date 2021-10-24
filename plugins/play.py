@@ -105,7 +105,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 @Client.on_message(
-    command("musicplayer") & ~filters.edited & ~filters.bot & ~filters.private
+    command("Maintainmode") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @authorized_users_only
 async def hfmm(_, message):
@@ -116,7 +116,7 @@ async def hfmm(_, message):
         return
     if len(message.command) != 2:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "I only recognize `/Maintainmode on` and /Maintainmode `off only`"
         )
         return
     status = message.text.split(None, 1)[1]
@@ -124,26 +124,26 @@ async def hfmm(_, message):
     if status in ["ON", "on", "On"]:
         lel = await message.reply("`Processing...`")
         if message.chat.id not in DISABLED_GROUPS:
-            await lel.edit("Music Player Already Activated In This Chat")
+            await lel.edit("This Chat Already In maintainence mode")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"Music Player Successfully Enabled For Users In The Chat **{message.chat.title}**"
+            f"Maintainence Mode Disabled In **{message.chat.title}** Chat"
         )
 
     elif status in ["OFF", "off", "Off"]:
         lel = await message.reply("`Processing...`")
 
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("Music Player Already turned off In This Chat")
+            await lel.edit("maintainence mode is not active in This Chat")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"Music Player Successfully Deactivated For Users In The Chat **{message.chat.title}**"
+            f"Maintainence mode is now active in **{message.chat.title}** Chat"
         )
     else:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "I only recognize `/Maintainmode on` and /Maintainmode `off only"
         )
 
 
