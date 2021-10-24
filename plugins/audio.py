@@ -3,7 +3,7 @@ from os import path
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 
-from client import callsmusic, queues
+from Client import callsmusic, queues
 
 import converter
 from youtube import youtube
