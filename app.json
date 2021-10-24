@@ -3,11 +3,11 @@
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
   "logo": "https://telegra.ph/file/21e8e309addc276362496.jpg",
-  "repository": https://github.com/TeamDeeCode/DeCoDeMusic",
+  "repository": "https://github.com/TeamDeeCode/DeCoDeMusic",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram session string",
+      "description": "Pyrogram session string get it from https://replit.com/@MissLilly/TeamDeeCode?v=1",
       "required": true
     },
     "BOT_TOKEN": {
@@ -24,7 +24,7 @@
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "your heroku apikey",
+      "description": "your heroku api key get it from https://dashboard.heroku.com/account",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -42,7 +42,7 @@
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
-      "value": "10"
+      "value": "70"
     },
     "BOT_USERNAME": {
       "description": "USERNAME BOT",
@@ -55,6 +55,6 @@
     "ASSISTANT_USERNAME": {
       "description": "USERNAME ASSISTANT",
       "required": true
-    },     
+    }     
   }
 }
