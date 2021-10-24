@@ -121,25 +121,25 @@ async def hfmm(_, message):
         return
     status = message.text.split(None, 1)[1]
     message.chat.id
-    if status in ["ON", "on", "On"]:
+    if status in ["OFF", "Off", "off"]:
         lel = await message.reply("`Processing...`")
         if message.chat.id not in DISABLED_GROUPS:
-            await lel.edit("This Chat Already In maintainence mode")
+            await lel.edit("This Chat is not In maintainence mode")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"Maintainence Mode enabled In **{message.chat.title}** Chat"
+            f"Maintainence Mode disabled In **{message.chat.title}** Chat"
         )
 
-    elif status in ["OFF", "off", "Off"]:
+    elif status in ["ON", "On", "on"]:
         lel = await message.reply("`Processing...`")
 
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("maintainence mode is not active in This Chat")
+            await lel.edit("maintainence mode  already active in This Chat")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"Maintainence mode is now disabled in **{message.chat.title}** Chat"
+            f"Maintainence mode is now enabled in **{message.chat.title}** Chat"
         )
     else:
         await message.reply_text(
@@ -174,7 +174,7 @@ async def play(_, message: Message):
     global que
     global useer
     if message.chat.id in DISABLED_GROUPS:
-        await message.reply("**Musicplayer is Disable, ask admin for Enable it!**")
+        await message.reply("**maintainence mode is on, ask admin to disable it!**")
         return
     lel = await message.reply("🔄 **Processing...**")
 
