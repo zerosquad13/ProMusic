@@ -3,10 +3,10 @@ from os import path
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 
-from callsmusic import callsmusic, queues
+from client import callsmusic, queues
 
 import converter
-from downloaders import youtube
+from youtube import youtube
 
 from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
 from helpers.filters import command, other_filters
