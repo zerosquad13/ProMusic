@@ -1,8 +1,8 @@
 import requests
 from pyrogram import Client as Bot
 
-from DeCodeMusic.callsmusic import run
-from DeCodeMusic.config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
+from Client.callsmusic import run
+from config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
 
 response = requests.get(BG_IMAGE)
 with open("./etc/foreground.png", "wb") as file:
