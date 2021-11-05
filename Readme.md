@@ -8,7 +8,7 @@
 ![GitHub](https://img.shields.io/github/license/TeamDeeCode/DeCoDeMusic) 
 # [𝗗𝗲𝗖𝗼𝗱𝗲 𝗠𝘂𝘀𝗶𝗰](https://t.me/DeCodeMusicBot) 
 
-<img src="https://giphy.com/gifs/kni4bFjnCrCFYqF8L5" />
+![Decode](https://github.com/TeamDeeCode/DeCoDeMusic/blob/Pytgcalls/20211105_114009.gif) 
 
 #  💡Dᴇᴠᴇʟᴏᴩᴇᴍᴇɴᴛ•Sᴜᴩᴩᴏʀᴛ👥[Here !](https://t.me/DeCodeSupport)
 
