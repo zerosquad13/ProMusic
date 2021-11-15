@@ -24,7 +24,9 @@ from helpers.channelmusic import get_chat_id
 import aiofiles
 import ffmpeg
 from PIL import Image, ImageFont, ImageDraw
+from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
+from pytgcalls.types.input_stream import InputStream
 
 # plus
 chat_id = None
