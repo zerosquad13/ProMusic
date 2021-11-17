@@ -40,7 +40,7 @@
 
 # Deploy On Railway
 
-[!Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/TEAM-PATRICIA/PatriciaMusic2.0&envs=BOT_USERNAME, COMMAND_PREFIXES, DURATION_LIMIT, SUDO_USERS, OWNER_ID, API_HASH, API_ID, ASSISTANT_USERNAME, SESSION_NAME, BOT_TOKEN, BOT_NAME )
+[Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/TEAM-PATRICIA/PatriciaMusic2.0&envs=BOT_USERNAME, COMMAND_PREFIXES, DURATION_LIMIT, SUDO_USERS, OWNER_ID, API_HASH, API_ID, ASSISTANT_USERNAME, SESSION_NAME, BOT_TOKEN, BOT_NAME )
 
 
 ## DEPLOY ON HEROKU 🚀
