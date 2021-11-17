@@ -24,7 +24,9 @@ from helpers.channelmusic import get_chat_id
 import aiofiles
 import ffmpeg
 from PIL import Image, ImageFont, ImageDraw
+from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
+from pytgcalls.types.input_stream import InputStream
 
 # plus
 chat_id = None
@@ -385,7 +387,15 @@ async def play(_, message: Message):
             reply_markup=keyboard,
         )
     else:
-        await callsmusic.pytgcalls.join_group_call(message.chat.id, InputAudioStream(file_path))
+        await callsmusic.pytgcalls.join_group_call(
+                message.chat.id, 
+                InputStream(
+                    InputAudioStream(
+                        file_path,
+                    ),
+                ),
+                stream_type=StreamType().local_stream,
+            ) 
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,

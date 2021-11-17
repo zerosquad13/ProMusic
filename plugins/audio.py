@@ -66,7 +66,15 @@ async def stream(_, message: Message):
         caption=f"#⃣  𝐲𝐨𝐮𝐫 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐬𝐨𝐧𝐠 𝐰𝐚𝐬 𝐚𝐝𝐝𝐞𝐝 𝐭𝐨 *𝐪𝐮𝐞𝐮𝐞* 𝐚𝐭 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧 {position}!\n\n⚡ __𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐃𝐞𝐂𝐨𝐝𝐞 𝐀.𝐈__")
         return await lel.delete()
     else:
-        await callsmusic.pytgcalls.join_group_call(message.chat.id, InputAudioStream(file_path))
+        await callsmusic.pytgcalls.join_group_call(
+                message.chat.id, 
+                InputStream(
+                    InputAudioStream(
+                        file_path,
+                    ),
+                ),
+                stream_type=StreamType().local_stream,
+            ) 
         costumer = message.from_user.mention
         await message.reply_photo(
         photo=f"{AUD_IMG}",
