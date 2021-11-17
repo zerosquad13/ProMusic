@@ -50,37 +50,40 @@ async def stop(_, message: Message):
                              caption="❌ **Stopped Streaming\n use /play for new song**"
     )
 
-
-@Client.on_message(command(["skip", "next"]) & other_filters)
+@Client.on_message(command(["skip", "second", "next", f"next@{BOT_USERNAME}"]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
     global que
     chat_id = message.chat.id
-    ACTV_CALL = []
+    ACTV_CALLS = {}
     for x in callsmusic.pytgcalls.active_calls:
-        ACTV_CALL.append(int(x.chat_id))
-    if int(chat_id) not in ACTV_CALL:
-        await message.reply_text("❗ Nothing is playing to skip!")
+        ACTV_CALLS(int(x.chat_id))
+    if int(chat_id) not in ACTV_CALLS:
+        await message.reply_text("❌ **no music is currently playing**")
     else:
-        callsmusic.queues.task_done(chat_id)
-
-        if callsmusic.queues.is_empty(chat_id):
+        queues.task_done(chat_id)
+        
+        if queues.is_empty(chat_id):
             await callsmusic.pytgcalls.leave_group_call(chat_id)
         else:
             await callsmusic.pytgcalls.change_stream(
-                chat_id, InputAudioStream(callsmusic.queues.get(chat_id)["file"])
+                chat_id, 
+                InputStream(
+                    InputAudioStream(
+                        callsmusic.queues.get(chat_id)["file"],
+                    ),
+                ),
             )
-
+                
     qeue = que.get(chat_id)
     if qeue:
-        skip = qeue.pop(0)
+        qeue.pop(0)
     if not qeue:
         return
-    await message.reply_photo(
-                             photo="https://telegra.ph/file/96129f4d0e984d2432e55.jpg", 
-                             caption=f'- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**'
-   ) 
+    await message.reply_text("⏭ **You've skipped to the next song.**")
+
+
 
 
 @Client.on_message(filters.command(["reload", "refresh"]))
