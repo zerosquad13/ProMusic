@@ -37,10 +37,6 @@
 
 ## 💡 How To Host ❓️
 
-# Deploy On Railway
-
-[![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/TEAM-PATRICIA/PatriciaMusic2.0&envs=BOT_USERNAME,BOT_TOKEN,SESSION_NAME,SUPPORT_GROUP,BOT_NAME,BG_IMAGE,ARQ_API_KEY,ASSISTANT_NAME,API_ID,UPDATES_CHANNEL,API_HASH,PMPERMITSUDO_USERS,DURATION_LIMIT )
-
 
 ## DEPLOY ON HEROKU 🚀
 
