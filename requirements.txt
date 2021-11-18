@@ -1,8 +1,8 @@
+git+https://github.com/DeCodeOwner/yt-dl@master
 pyrogram
 TgCrypto
 py-tgcalls
 python-dotenv
-yt_dlp
 youtube_dl
 youtube_search_python==1.4.6
 requests
