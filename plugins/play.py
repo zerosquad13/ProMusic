@@ -32,6 +32,7 @@ from pytgcalls.types.input_stream import InputStream
 chat_id = None
 DISABLED_GROUPS = []
 useer = "NaN"
+ACTV_CALLS = []
 
 
 def cb_admin_check(func: Callable) -> Callable:
@@ -371,11 +372,10 @@ async def play(_, message: Message):
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
         file_path = await converter.convert(youtube.download(url))
-    ACTV_CALLS = []
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
-    if int(message.chat.id) in ACTV_CALLS:
-        position = await queues.put(message.chat.id, file=file_path)
+    if int(chat_id) in ACTV_CALLS:
+        position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
             caption="**🎵 Song:** {}\n**🕒 Duration:** {} min\n**👤 Added By:** {}\n\n**#⃣ Queued Position:** {}".format(
@@ -388,7 +388,7 @@ async def play(_, message: Message):
         )
     else:
         await callsmusic.pytgcalls.join_group_call(
-                message.chat.id, 
+                chat_id, 
                 InputStream(
                     InputAudioStream(
                         file_path,
