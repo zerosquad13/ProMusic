@@ -176,6 +176,7 @@ async def m_cb(b, cb):
     & ~filters.via_bot
 )
 async def play(_, message: Message):
+    chat_id = message.chat.id
     global que
     global useer
     if message.chat.id in DISABLED_GROUPS:
