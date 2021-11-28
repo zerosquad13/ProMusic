@@ -2,13 +2,12 @@ git+https://github.com/pyrogram/pyrogram@master
 tgcrypto
 py-tgcalls
 python-dotenv
-youtube-search-python
 requests
 aiohttp
 aiofiles
 asyncio
 youtube-search
-Pillow
+pillow
 future
 psutil
 wget
