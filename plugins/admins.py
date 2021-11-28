@@ -22,8 +22,8 @@ ACTV_CALLS = []
 async def pause(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/dd6814e241bfc4c0255cd.jpg", 
-                             caption="**⏸ Music Paused.\n use /resume**"
+        photo="https://telegra.ph/file/dd6814e241bfc4c0255cd.jpg", 
+        caption="**⏸ Music Paused.\n use /resume**",
     )
 
 
@@ -33,8 +33,8 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/d0f2dd5b7519bb5444139.jpg", 
-                             caption="**▶️ Music Resumed.\n use /pause**"
+        photo="https://telegra.ph/file/d0f2dd5b7519bb5444139.jpg", 
+        caption="**▶️ Music Resumed.\n use /pause**",
     )
 
 
@@ -49,8 +49,8 @@ async def stop(_, message: Message):
 
     await callsmusic.pytgcalls.leave_group_call(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/8d22aa7d53b6acb9a125e.jpg", 
-                             caption="❌ **Stopped Streaming\n use /play for new song**"
+        photo="https://telegra.ph/file/8d22aa7d53b6acb9a125e.jpg", 
+        caption="❌ **Stopped Streaming\n use /play for new song**",
     )
 
 @Client.on_message(command(["skip", "second", "next", f"next@{BOT_USERNAME}"]) & other_filters)
@@ -101,6 +101,6 @@ async def admincache(client, message: Message):
     )
 
     await message.reply_photo(
-                              photo="https://telegra.ph/file/d881ea9de7620ecc36d08.jpg",
-                              caption="**Reloaded\n Admin List updated**"
+        photo="https://telegra.ph/file/d881ea9de7620ecc36d08.jpg",
+        caption="**Reloaded\n Admin List updated**",
     )
