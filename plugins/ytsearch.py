@@ -1,7 +1,6 @@
 import logging
 
 from pyrogram.types import Message
-from search_engine_parser import GoogleSearch
 from youtube_search import YoutubeSearch
 
 from pyrogram import Client as app, filters
@@ -24,7 +23,7 @@ async def ytsearch(_, message: Message):
             return
         query = message.text.split(None, 1)[1]
         m = await message.reply_text("Searching....")
-        results = YoutubeSearch(query, max_results=4).to_dict()
+        results = YoutubeSearch(query, max_results=5).to_dict()
         text = ""
         for i in range(4):
             text += f"Title - {results[i]['title']}\n"
