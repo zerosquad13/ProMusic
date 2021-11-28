@@ -14,6 +14,8 @@ from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
 
+ACTV_CALLS = []
+
 @Client.on_message(command(["pause", "jeda"]) & other_filters)
 @errors
 @authorized_users_only
@@ -57,9 +59,8 @@ async def stop(_, message: Message):
 async def skip(_, message: Message):
     global que
     chat_id = message.chat.id
-    ACTV_CALLS = {}
     for x in callsmusic.pytgcalls.active_calls:
-        ACTV_CALLS(int(x.chat_id))
+        ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
         await message.reply_text("❌ **no music is currently playing**")
     else:
