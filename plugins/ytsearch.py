@@ -1,18 +1,6 @@
-import logging
-
+from pyrogram import Client as app, filters
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
-
-from pyrogram import Client as app, filters
-
-logging.basicConfig(
-    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-logger = logging.getLogger(__name__)
-
-import pyrogram
-
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 @app.on_message(pyrogram.filters.command(["search"]))
@@ -25,7 +13,7 @@ async def ytsearch(_, message: Message):
         m = await message.reply_text("Searching....")
         results = YoutubeSearch(query, max_results=5).to_dict()
         text = ""
-        for i in range(4):
+        for i in range(5):
             text += f"Title - {results[i]['title']}\n"
             text += f"Duration - {results[i]['duration']}\n"
             text += f"Views - {results[i]['views']}\n"
