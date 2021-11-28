@@ -15,10 +15,12 @@ from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+ACTV_CALLS = []
 
 @Client.on_message(command("audio") & other_filters)
 @errors
 async def stream(_, message: Message):
+    chat_id = message.chat.id
 
     lel = await message.reply("🔁 **𝐩𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠** 𝐬𝐨𝐮𝐧𝐝...")
     sender_id = message.from_user.id
@@ -55,11 +57,10 @@ async def stream(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
     else:
         return await lel.edit_text("! 𝐲𝐨𝐮 𝐝𝐢𝐝 𝐧𝐨𝐭 𝐠𝐢𝐯𝐞 𝐦𝐞 𝐚𝐮𝐝𝐢𝐨 𝐟𝐢𝐥𝐞 𝐨𝐫 𝐲𝐭 𝐥𝐢𝐧𝐤 𝐭𝐨 𝐬𝐭𝐫𝐞𝐚𝐦!")
-    ACTV_CALLS = []
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))    
-    if int(message.chat.id) in ACTV_CALLS:
-        position = await queues.put(message.chat.id, file=file_path)
+    if int(chat_id) in ACTV_CALLS:
+        position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
         photo=f"{QUE_IMG}",
         reply_markup=keyboard,
@@ -67,7 +68,7 @@ async def stream(_, message: Message):
         return await lel.delete()
     else:
         await callsmusic.pytgcalls.join_group_call(
-                message.chat.id, 
+                chat_id, 
                 InputStream(
                     InputAudioStream(
                         file_path,
