@@ -8,7 +8,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from config import SUDO_USERS
-from callsmusic.callsmusic import client as USER
+from Client.callsmusic import client as USER
 
 @Client.on_message(filters.command(["broadcast"]))
 async def broadcast(_, message: Message):
