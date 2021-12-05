@@ -34,6 +34,6 @@ async def broadcast(_, message: Message):
                 failed = failed + 1
                 # await wtf.edit(f"broadcasting... \n\nSent to: {sent} Chats \nFailed in:* {failed} Chats")
 
-    await message.reply\_text(
+    await message.reply_text(
         f"Broadcast Finished  \n\n****Sent to:**** {sent} Chats \n****Failed in:**** {failed} Chats**__Powered By:__**TeamDeeCode"
     )
