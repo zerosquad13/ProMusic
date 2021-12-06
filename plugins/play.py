@@ -258,9 +258,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("🚨 Support", url="t.me/decodesupport"),
-                    InlineKeyboardButton("📡 Updates", url="t.me/DeeCodebots"),
-                ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                    InlineKeyboardButton(text="🗑 Close", callback_data="cls")
+                ]
             ]
         )
 
@@ -294,11 +293,10 @@ async def play(_, message: Message):
 
             keyboard = InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("🚨 Support", url="t.me/decodesupport"),
-                        InlineKeyboardButton("📡 Updates", url="t.me/DeeCodebots"),
-                    ],
-                    [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                 [
+                    InlineKeyboardButton("🚨 Support", url="t.me/decodesupport"),
+                    InlineKeyboardButton(text="🗑 Close", callback_data="cls")
+                 ]
                 ]
             )
 
@@ -359,9 +357,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("🚨 Support", url="t.me/decodesupport"),
-                    InlineKeyboardButton("📡 Updates", url="t.me/DeeCodebots"),
-                ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                    InlineKeyboardButton(text="🗑 Close", callback_data="cls")
+                ]
             ]
         )
 
@@ -379,7 +376,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="**🎵 Song:** {}\n**🕒 Duration:** {} min\n**👤 Added By:** {}\n\n**#⃣ Queued Position:** {}".format(
+            caption="**🎸 Song:** {}\n\n**⏰ Time:** {} min\n**👤 Requested By:** {}\n\n**#⃣ Queued at:** {}".format(
                 title,
                 duration,
                 message.from_user.mention(),
