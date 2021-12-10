@@ -14,7 +14,7 @@ async def cbhelps(_, query: CallbackQuery):
 __× First Add Me To Your Group..
 × Promote Me As Admin In Your Group With All Permission..__
 
-**🏷 Common Commands For [Pratheek Music Bot](https://t.me/pratheek06).
+**🏷 Common Commands!
 
 • `/play`<song name> - To play song from. YouTube 
 • `/audio` - Reply to audio file/YouTube link to play
