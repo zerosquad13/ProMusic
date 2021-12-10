@@ -16,13 +16,16 @@ __× First Add Me To Your Group..
 
 **🏷 Common Commands!
 
-• `/play`<song name> - To play song from. YouTube 
-• `/audio` - Reply to audio file/YouTube link to play
-• `/pause` - To pause currently stream
-• `/resume` - To resume currently paused
-• `/skip` or `/next` - to change song(work only  if another song is in queue) 
-• `/end` or `/stop` - stop/ends music Stream
-• `/refresh` or `/restart` - to restart Bot Server(only for heroku)""",
+/play<song name> to play song from. YouTube 
+/audio - reply to audio file/YouTube link to play
+/pause - to pause currently stream
+/resume - to resume currently paused
+/skip || /next - to change song(work only  if another song is in queue) 
+/end|| /stop - stop/ends music Stream
+/refresh || /restart - to restart Bot Server(only for heroku) 
+
+/update - to update latest version From Git.
+/ping - to see network speed """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
