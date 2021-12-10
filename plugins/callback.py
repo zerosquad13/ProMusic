@@ -9,7 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbhelps(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Group Music Bot : Help Menu**
+        f"""**DeeCode Music Bot : Help Menu**
 
 __× First Add Me To Your Group..
 × Promote Me As Admin In Your Group With All Permission..__
@@ -26,8 +26,8 @@ __× First Add Me To Your Group..
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="🎙️ Support Group 🎙️", url="https://t.me/SHIZUKA_VC_SUPPORT"),
-                    InlineKeyboardButton(text="📣 Channel", url=f"https://t.me/Pratheek_Bots")
+                    InlineKeyboardButton(text="🎙️ Support Group 🎙️", url="https://t.me/DeCodeSupport"),
+                    InlineKeyboardButton(text="📣 Channel", url=f"https://t.me/TeamDeeCoDe")
                 ],
                 [
                     InlineKeyboardButton(
@@ -56,10 +56,10 @@ async def cbstart(_, query: CallbackQuery):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",)
                   ],[
                     InlineKeyboardButton(
-                       "🗣️ Support 🗣️", url="https://t.me/SHIZUKA_VC_SUPPORT"
+                       "🗣️ Support 🗣️", url="https://t.me/DeCodeSupport"
                     ),
                     InlineKeyboardButton(
-                        "📣 Updates 📣", url="https://t.me/Pratheek_Bots")
+                        "📣 Updates 📣", url="https://t.me/TeamDeeCoDe")
                 ],[
                     InlineKeyboardButton(
                         "📚 Commands", callback_data="cbcmds"
