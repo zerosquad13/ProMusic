@@ -45,10 +45,10 @@ async def start(_, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",)
                   ],[
                     InlineKeyboardButton(
-                       "🗣️ Support 🗣️", url="https://t.me/SHIZUKA_VC_SUPPORT"
+                       "🗣️ Support 🗣️", url="https://t.me/DeCodeSupport"
                     ),
                     InlineKeyboardButton(
-                        "📣 Updates 📣", url="https://t.me/Pratheek_Bots")
+                        "📣 Updates 📣", url="https://t.me/TeamDeeCoDe")
                 ],[
                     InlineKeyboardButton(
                         "📚 Commands", callback_data="cbcmds"
