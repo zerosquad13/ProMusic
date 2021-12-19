@@ -16,3 +16,4 @@ yt-dlp
 heroku3
 motor
 dnspython
+pymongo
