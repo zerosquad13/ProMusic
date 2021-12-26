@@ -65,3 +65,13 @@ cp example.env .env # use vim to edit ENVs
 vim .env # fill up the ENVs (Steps: press i to enter in insert mode then edit the file. Press Esc to exit the editing mode then type :wq! and press Enter key to save the file).
 sudo python3 main.py # run the bot.
 ```
+
+### Special Credits 💖
+- [BrayDan](https://github.com/BrayDanXD): Dev
+- [Blaze](https://github.com/PiroXPower): Dev
+- [Aman](https://github.com/AMANTYA1): Dev
+- [Laky](https://github.com/Laky-64): PyTgCalls
+- [Dan](https://github.com/delivrance): Pyrogram
+- [Original Repo](https://github.com/callsmusic/callsmusic) CallsMusic
+- [RojSerBest](https://github.com/rojserbest) CallsMusic Developer
+- [TeamDaisyX](https://github.com/TeamDaisyX) for base code
