@@ -14,26 +14,18 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from typing import List
 
-from pyrogram.types import Chat
+from typing import List, Union
 
-from DeCoDe.cache.admins import get as gett
-from DeCoDe.cache.admins import set
+from pyrogram import filters
+
+from config import COMMAND_PREFIXES
+
+other_filters = filters.group & ~filters.edited & ~filters.via_bot & ~filters.forwarded
+other_filters2 = (
+    filters.private & ~filters.edited & ~filters.via_bot & ~filters.forwarded
+)
 
 
-async def get_administrators(chat: Chat) -> List[int]:
-    get = gett(chat.id)
-
-    if get:
-        return get
-    else:
-        administrators = await chat.get_members(filter="administrators")
-        to_set = []
-
-        for administrator in administrators:
-            if administrator.can_manage_voice_chats:
-                to_set.append(administrator.user.id)
-
-        set(chat.id, to_set)
-        return await get_administrators(chat)
+def command(commands: Union[str, List[str]]):
+    return filters.command(commands, COMMAND_PREFIXES)
