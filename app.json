@@ -1,13 +1,13 @@
 {
-    "name": "ProMusic",
+    "name": "DeCoDeMusic",
     "logo": "https://telegra.ph/file/95c333a0e464b4ee1228f.jpg",
-    "description": "Pro Music allow you to stream music trought the telegram voice chat feature.",
+    "description": "DeCoDe Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": [
         "music", 
         "voice chat", 
         "telegram"
     ],
-    "repository": "https://github.com/TeamDeeCode/ProMusic",
+    "repository": "https://github.com/TeamDeeCode/DeCoDeMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
