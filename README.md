@@ -75,3 +75,6 @@ sudo python3 main.py # run the bot.
 - [Original Repo](https://github.com/callsmusic/callsmusic) CallsMusic
 - [RojSerBest](https://github.com/rojserbest) CallsMusic Developer
 - [TeamDaisyX](https://github.com/TeamDaisyX) for base code
+
+### Support & Updates 🎑
+<a href="https://t.me/decodesupport"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/deecodebots"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
