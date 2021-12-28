@@ -481,7 +481,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     
 
-    text_links=None
+
     if message.reply_to_message:
         if message.reply_to_message.audio or message.reply_to_message.voice:
             pass
