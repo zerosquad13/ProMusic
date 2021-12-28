@@ -859,8 +859,8 @@ async def lol_cb(b, cb):
                 os.remove("final.png")
 
 
-@Client.on_message(command(["ytp", f"ytp@{BOT_USERNAME}"]) & other_filters)
-async def ytplay(_, message: Message):
+@Client.on_message(command(["play", f"ytp@{BOT_USERNAME}"]) & other_filters)
+async def vexeraplay(_, message: Message):
     
     bttn = InlineKeyboardMarkup(
         [
@@ -969,9 +969,10 @@ async def ytplay(_, message: Message):
     )
     await generate_cover(title, thumbnail, ctitle)
     file_path = await convert(youtube.download(url))
+    ACTV_CALLS = []
     for x in callsmusic.pytgcalls.active_calls:
-        ACTV_CALLS.append(int(x.chat_id))
-    if int(chat_id) in ACTV_CALLS:
+        ACTV_CALLS(int(x.chat_id))
+    if int(message.chat.id) in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         qeue = que.get(chat_id)
         s_name = title
