@@ -479,10 +479,7 @@ async def play(_, message: Message):
                     )
     try:
         await USER.get_chat(chid)
-    except:
-        await lel.edit(
-            f"» **userbot not in this chat or is banned in this group !**\n\n**unban @{ASSISTANT_NAME} and added again to this group manually, or type /reload then try again."
-        )
+    
         return
     text_links=None
     if message.reply_to_message:
