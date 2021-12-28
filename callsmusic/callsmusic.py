@@ -1,4 +1,4 @@
-from . import queues
+from callsmusic.queues import queues
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
