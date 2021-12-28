@@ -918,14 +918,7 @@ async def ytplay(_, message: Message):
                         f"🔴 **Flood Wait Error** 🔴 \n\n**userbot can't join this group due to many join requests for userbot.**"
                         f"\n\n**or add @{ASSISTANT_NAME} to this group manually then try again.**",
                     )
-    try:
-        await USER.get_chat(chid)
-    except:
-        await lel.edit(
-            f"» **userbot not in this chat or is banned in this group !**\n\n**unban @{ASSISTANT_NAME} and add to this group again manually, or type /reload then try again.**"
-        )
-        return
-
+    
     query = ""
     for i in message.command[1:]:
         query += " " + str(i)
