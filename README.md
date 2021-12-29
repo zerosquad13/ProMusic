@@ -70,6 +70,7 @@ sudo python3 main.py # run the bot.
 - [BrayDan](https://github.com/BrayDanXD): Dev
 - [Blaze](https://github.com/PiroXPower): Dev
 - [Aman](https://github.com/AMANTYA1): Dev
+- [Levina](https://github.com/levina-lab):For Base
 - [Laky](https://github.com/Laky-64): PyTgCalls
 - [Dan](https://github.com/delivrance): Pyrogram
 - [Original Repo](https://github.com/callsmusic/callsmusic) CallsMusic
