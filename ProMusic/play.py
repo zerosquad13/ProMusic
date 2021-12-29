@@ -418,7 +418,7 @@ async def m_cb(b, cb):
                 "userbot is not connected to voice chat.", show_alert=True
             )
 
-@Client.on_message(command(["ytplay", f"ytplay@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["play", f"ytplay@{BOT_USERNAME}"]) & other_filters)
 async def play(_, message: Message):
 
     bttn = InlineKeyboardMarkup(
@@ -854,7 +854,7 @@ async def lol_cb(b, cb):
                 os.remove("final.png")
 
 
-@Client.on_message(command(["play", f"ytp@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["ytplay", f"ytp@{BOT_USERNAME}"]) & other_filters)
 async def vexeraplay(_, message: Message):
     
     bttn = InlineKeyboardMarkup(
