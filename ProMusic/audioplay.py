@@ -1,7 +1,8 @@
 # Copyright (C) 2021 DeCoDe
 
+
 from os import path
-import DeCoDe.converter
+import converter
 from callsmusic import callsmusic, queues
 from config import (
     AUD_IMG,
@@ -29,10 +30,10 @@ async def stream(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="✨ Gʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                    text="✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                 ),
                 InlineKeyboardButton(
-                    text="🌻 Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    text="🌻 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
