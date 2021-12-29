@@ -1,112 +1,68 @@
 {
-    "name": "DeCoDeMusic",
-    "logo": "https://telegra.ph/file/95c333a0e464b4ee1228f.jpg",
-    "description": "DeCoDe Music allow you to stream music trought the telegram voice chat feature.",
-    "keywords": [
-        "music", 
-        "voice chat", 
-        "telegram"
-    ],
-    "repository": "https://github.com/TeamDeeCode/DeCoDeMusic",
-    "stack": "container",
-    "env": {
-        "SESSION_NAME": {
-            "description": "fill with the pyrogram session string",
-            "required": true
-        },
-        "BOT_TOKEN": {
-            "description": "fill with your bot token from @BotFather",
-            "required": true
-        },
-        "BOT_NAME": {
-            "description": "fill with your music bot name.",
-            "required": true,
-            "value": ""
-        },
-        "OWNER_ID": {
-            "description": "fill with your telegram id as the owner of the bot",
-            "required": true,
-            "value": ""
-        },
-        "DATABASE_URL": {
-            "description": "fill with the mongodb url you get from cloud.mongodb.com",
-            "required": true,
-            "value": ""
-        },
-        "LOG_CHANNEL": {
-            "description": "create a private channel and get the channel id (give the channel username/link to bot @username_to_id_bot and get the channel id), add your bot as admin to the channel too",
-            "required": true,
-            "value": ""
-        },
-        "BOT_USERNAME": {
-            "description": "fill with your bot username without @",
-            "required": true,
-            "value": "veezmusicbot"
-        },
-        "ASSISTANT_NAME": {
-            "description": "fill with the assistant username without @",
-            "required": true,
-            "value": "veezasisstant"
-        },
-        "BG_IMAGE": {
-            "description": "fill with your costum background image link",
-            "required": false,
-            "value": "https://telegra.ph/file/1658f5d92eaefd8dea45f.png"
-        },
-        "OWNER_NAME": {
-            "description": "fill with your telegram username without @",
-            "required": false,
-            "value": "BrayDenXD"
-        },
-        "ALIVE_NAME": {
-            "description": "fill with the nickname of your telegram account",
-            "required": false,
-            "value": "Levina"
-        },
-        "API_ID": {
-            "description": "your Api ID from my.telegram.org/apps",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "your Api Hash from my.telegram.org/apps",
-            "required": true
-        },
-        "SUDO_USERS": {
-            "description": "fill with the user id who can access all function in your bot (separate with space).",
-            "required": true
-        },
-        "DURATION_LIMIT": {
-            "description": "max duration for music to download (in minutes, default is 40).",
-            "required": true,
-            "value": "40"
-        },
-        "UPDATES_CHANNEL": {
-            "description": "if you have channel, fill the channel username here without @",
-            "required": false,
-            "value": "DeeCodeBots"
-        },
-        "GROUP_SUPPORT": {
-            "description": "if you have group, fill the group username here without @",
-            "required": false,
-            "value": "DeCodeSupport"
-        }
+  "name": "DeCodeMusic",
+  "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
+  "keywords": ["music", "voicechat", "telegram"],
+  "logo": "https://telegra.ph/file/21e8e309addc276362496.jpg",
+  "repository": "https://github.com/TeamDeeCode/DeCoDeMusic",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "Pyrogram session string get it from https://replit.com/@MissLilly/TeamDeeCode?v=1",
+      "required": true
     },
-    "addons": [],
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        },
-        {
-            "url": "heroku/nodejs"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
+    "BOT_TOKEN": {
+      "description": "A bot token from @BotFather",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Your MusicPlayer Bot Name.",
+      "required": false,
+      "value": ""
+    },
+    "API_ID": {
+      "description": "App ID from my.telegram.org/apps",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "your heroku api key get it from https://dashboard.heroku.com/account",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Your heroku appname",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "App hash from my.telegram.org/apps",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "List of user IDs counted as admin everywhere (separated by space).",
+      "required": true
+    },
+    "DB_URL": {
+      "description": "put mongodb url",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "u can put my example 'my'",
+      "required": true
+    },
+    "DURATION_LIMIT": {
+      "description": "Max audio duration limit for downloads (minutes).",
+      "required": true,
+      "value": "70"
+    },
+    "BOT_USERNAME": {
+      "description": "USERNAME BOT",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Owner userid",
+      "required": true
+    },
+    "ASSISTANT_USERNAME": {
+      "description": "USERNAME ASSISTANT",
+      "required": true
+    }     
+  }
 }

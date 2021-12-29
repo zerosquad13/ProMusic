@@ -1,13 +1,12 @@
 import requests
 from pytgcalls import idle
-from callsmusic import run
-from ProMusic import __version__
 from pyrogram import Client as Bot
-from config import API_HASH, API_ID, BG_IMAGE, BOT_TOKEN
 
+from Client.callsmusic import run
+from config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
 
 response = requests.get(BG_IMAGE)
-with open("./ImageFont/foreground.png", "wb") as file:
+with open("./etc/foreground.png", "wb") as file:
     file.write(response.content)
 
 
@@ -16,10 +15,8 @@ bot = Bot(
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
-    plugins=dict(root="ProMusic"),
+    plugins=dict(root="plugins")
 )
-
-print(f"[INFO]: PRO MUSIC v{__version__} STARTED !")
 
 bot.start()
 run()
