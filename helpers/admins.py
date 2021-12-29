@@ -1,7 +1,7 @@
- from typing import List
+import DeCoDe.cache.admins
+from typing import List
 
 from pyrogram.types import Chat
-
 from DeCoDe.cache.admins import get as gett
 from DeCoDe.cache.admins import set
 
