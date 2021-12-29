@@ -2,7 +2,7 @@
 
 
 from os import path
-import converter
+import DeCoDe.converter
 from callsmusic import callsmusic, queues
 from config import (
     AUD_IMG,
