@@ -581,7 +581,7 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton(text="💫 𝙲𝙷𝙰𝙽𝙽𝙴𝙻✨", url=f"https://t.me/VEXERA_UPDATES"),
 
                     InlineKeyboardButton(text="💫𝚂𝚄𝙿𝙿𝙾𝚁T✨", url=f"https://t.me/SNEHABHI_SERVER")
-
+]
             ]
     )
     message.from_user.first_name
