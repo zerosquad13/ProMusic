@@ -49,7 +49,7 @@ async def stream(_, message: Message):
     title = audio.title
     file_name = get_file_name(audio)
     duration = convert_seconds(audio.duration)
-    file_path = await converter.convert(
+    file_path = await DeCoDe.converter.convert(
         (await message.reply_to_message.download(file_name))
         if not path.isfile(path.join("downloads", file_name))
         else file_name
