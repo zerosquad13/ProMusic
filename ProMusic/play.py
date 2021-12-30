@@ -487,7 +487,7 @@ async def m_cb(b, cb):
             )
 
 
-@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["ytplay", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(_, message: Message):
     chat_id = get_chat_id(message.chat)
     bttn = InlineKeyboardMarkup(
@@ -919,7 +919,7 @@ async def lol_cb(b, cb):
                 os.remove("final.png")
 
 
-@Client.on_message(command(["ytplay", f"ytplay@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["play", f"ytplay@{BOT_USERNAME}"]) & other_filters)
 async def ytplay(_, message: Message):
     chat_id = get_chat_id(message.chat)
     bttn = InlineKeyboardMarkup(
@@ -1031,11 +1031,10 @@ async def ytplay(_, message: Message):
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
-    file_path = await convert(youtube.download(url))
-    ACTV_CALLS = []
+    file_path = await converter.convert(youtube.download(url))
     for x in callsmusic.pytgcalls.active_calls:
-        ACTV_CALLS(int(x.chat_id))
-    if int(message.chat.id) in ACTV_CALLS:
+        ACTV_CALLS.append(int(x.chat_id))
+    if int(chat_id) in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         qeue = que.get(chat_id)
         s_name = title
