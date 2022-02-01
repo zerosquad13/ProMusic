@@ -23,7 +23,7 @@ The easy way to host this bot, deploy to Heroku, Change the app country to Europ
 #### Admins Only 👷‍♂️
 - `/player` - open music player settings panel
 - `/pause` - pause song play
-- `/resume` - resume song play
+- `/resume` - resume song plays
 - `/skip` - play next song
 - `/end` - stop music play
 - `/music on` - to disable music player in your group
